@@ -1,0 +1,38 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.headerPfp{
+  max-width: 120px;
+  min-width: 70px;
+}
+.headerPfp img{
+  border-radius: 80px;
+}
+.headerName{
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight:normal;
+}
+.navText{
+  font-family: 'Kanit';
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.btnNav{
+  height: 50px;
+}
+.mainContainer{
+  min-height: 55vh;
+}
+
+
+.footerLogo{
+  max-height: 200px;
+}
+li{
+  list-style-type: none;
+}
