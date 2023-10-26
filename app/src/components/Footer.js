@@ -7,14 +7,14 @@ function Footer() {
             <article className='col-12 col-lg-3 col-md-3 d-flex align-items-center justify-content-center'>
                 <img className='img img-fluid footerLogo' src={logo} alt='logo' />
             </article>
-            <article className='col-4 col-lg-3 col-md-3 mt-5'>
+            <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
                     <p className='navText'>Projects</p>
                     <li>Little Lemon</li>
                     <li>Yelp Camps</li>
                 </ul>
             </article>
-            <article className='col-4 col-lg-3 col-md-3 mt-5'>
+            <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
                     <p className='navText'>Services</p>
                     <li>SPA Development</li>
@@ -22,11 +22,12 @@ function Footer() {
                     <li>UI/UX</li>
                 </ul>
             </article>
-            <article className='col-4 col-lg-3 col-md-3 mt-5'>
+            <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
                     <p className='navText'>Hire</p>
                     <li>Upwork</li>
                     <li>Freelancer</li>
+                    <li>Linkedin</li>
                 </ul>
             </article>
         </section>

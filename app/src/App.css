@@ -3,6 +3,7 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
+
 .headerPfp{
   max-width: 120px;
   min-width: 70px;
@@ -14,6 +15,12 @@ body{
   font-family: 'Julius Sans One', sans-serif;
   font-weight:normal;
 }
+.darkMode{
+  border: 1px solid black;
+  border-radius: 25px;
+  width: 40px;
+  transition: 0.5;
+}
 .navText{
   font-family: 'Kanit';
 }
@@ -24,15 +31,41 @@ a{
 
 .btnNav{
   height: 50px;
+  border: 1px solid #dee2e6;
+  transition: 0.2 s;
+}
+.btnNav:hover{
+  background-color: #dee2e6;
+}
+.active{
+  border-bottom: none;
+  background-color: white;
 }
 .mainContainer{
-  min-height: 55vh;
+  min-height: 60vh;
 }
 
 
 .footerLogo{
-  max-height: 200px;
+  max-height: 150px;
 }
 li{
   list-style-type: none;
+}
+.cardSize{
+  margin: 0px 10px 10px 10px;
+  padding-top: 10px;
+  max-width: 18rem;
+  max-height: 400px;
+}
+.projectImage{
+  height: 150px;
+  width: 100%;
+}
+
+.techBox{
+  min-width: 50px;
+  border: 1px solid black;
+  border-radius: 50px;
+  margin: 0px 0px 5px 0px;
 }

@@ -11,27 +11,21 @@ function Nav() {
                     </button>
                     <div className="row collapse navbar-collapse" id="navbarNav">
                         <section className='ps-4 row justify-content-center p-0'>
-                            <button className='btnNav col-12 col-lg-3 col-md-3 text-center border border-black p-0'>
-                                <NavLink to={"/projects"}>
-                                    <p className='mb-0 navText'>Projects</p>
-                                </NavLink>
-                            </button>
-                            <button className='btnNav col-12 col-lg-3 col-md-3 text-center border border-black p-0'>
-                                <NavLink to={"/about"}>
-                                    <p className='mb-0 navText'>About Me</p>
-                                </NavLink>
+                            <NavLink to={"/projects"} className='btnNav d-flex justify-content-center align-items-center col-12 col-lg-3 col-md-3p-0'>
+                                    <p className='mb-0 navText d-flex'>Projects</p>
+                            </NavLink>
 
-                            </button>
-                            <button className='btnNav col-12 col-lg-3 col-md-3 text-center border border-black p-0'>
-                                <NavLink to={"/techstack"}>
-                                    <p className='mb-0 navText'>Teck Stack</p>
-                                </NavLink>
-                            </button>
-                            <button className='btnNav col-12 col-lg-3 col-md-3 text-center border border-black p-0'>
-                                <NavLink to={"/services"}>
-                                    <p className='mb-0 navText'>Services</p>
-                                </NavLink>
-                            </button>
+                            <NavLink to={"/about"} className='btnNav d-flex justify-content-center align-items-center col-12 col-lg-3 col-md-3 text-center p-0'>
+                                    <p className='mb-0 navText d-flex'>About Me</p>
+                            </NavLink>
+
+                            <NavLink to={"/techstack"} className='btnNav d-flex justify-content-center align-items-center col-12 col-lg-3 col-md-3 text-center p-0'>
+                                    <p className='mb-0 navText d-flex'>Teck Stack</p>
+                            </NavLink>
+
+                            <NavLink to={"/services"} className='btnNav d-flex justify-content-center align-items-center col-12 col-lg-3 col-md-3 text-center p-0'>
+                                    <p className='mb-0 navText d-flex'>Services</p>
+                            </NavLink>
                         </section>
                     </div>
                 </div>
