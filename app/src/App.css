@@ -39,6 +39,14 @@ body{
   background-color: #203A43;
   color: #eeec;
 }
+.linkIcon{
+  transition: 0.1s;
+}
+.headerSocials:hover .linkIcon{
+  transform: scale(1.1);
+}
+
+
 .darkMode{
   border: 1px solid black;
   border-radius: 25px;
@@ -87,6 +95,9 @@ li{
 }
 .projectImage:hover{
   cursor: pointer;
+}
+.projectLink:hover .linkIcon{
+  transform: scale(1.1);
 }
 
 .techBox{
