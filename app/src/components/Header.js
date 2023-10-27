@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 const pfp = '/pfp.jpg'
@@ -11,7 +12,7 @@ const socialList = [
 ]
 const mapSocials = socialList.map((item, index)=>{
     return(
-        <div key={index} className='col p-1 navText'><a href={item.link} target='_blank' rel='noreferrer'>{item.name}</a></div>
+        <a key={index} href={item.link} target='_blank' rel='noreferrer' className='p-1 signikaFont headerSocials m-0'><p className='px-1 m-0'>{item.name} <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' /></p></a>
     )
 })
 function Header() {
@@ -20,7 +21,7 @@ function Header() {
         <header className='container'>
             <div className='container-fluid pt-2'>
                 <section className='row'>
-                    <div className='col-12 col-lg-6 col-md-6'>
+                    <div className='col-12 col-lg-6 col-md-6 p-0'>
                         <div className='row'>
                             <div className='col d-flex align-items-center headerPfp'>
                                 <img className='img img-fluid' src={pfp} alt='' />
@@ -32,13 +33,13 @@ function Header() {
                         </div>
                     </div>
 
-                    <div className='col-12 col-lg-6 col-md-6 '>
+                    <div className='col-12 col-lg-6 col-md-6 p-0'>
                         <div className=''>
                             <div className='mb-1 mt-3 p-0 d-flex justify-content-end'>
                                 <article className={`darkMode text-${dark ? "end" : "left"} px-1`} onClick={()=>setDark(!dark)} ><FontAwesomeIcon icon={faCircle} style={{color: "#fbf650"}} /></article>
                             </div>
                         </div>
-                        <div className='row text-end'>
+                        <div className='d-flex justify-content-end pt-1 gap-2'>
                             {mapSocials}
                         </div>
                     </div>

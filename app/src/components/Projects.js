@@ -10,17 +10,17 @@ const projects = [
 function Projects() {
   const [gif, setGif] = useState('/LittleLemonHome.png')
   return (
-    <>
+    <section className='d-flex align-items-center'>
       {projects.map((item, index) => {
         return (
-          <div key={item.index} className="card cardSize">
+          <div key={item.index} className="card shadow cardSize">
             <img src={gif} alt='project-cover' className="card-img-top projectImage" onMouseEnter={() => setGif(item.gif)} onMouseLeave={() => setGif(item.image)} />
             <div className="card-body">
-              <h5 className="card-title">{item.name}</h5>
-              <p className="card-text">{item.description}</p>
+              <h5 className="card-title navText">{item.name}</h5>
+              <p className="card-text ralewayFont">{item.description}</p>
               <div className='d-flex gap-3'>
-                <a href={item.github}><p>GitHub <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' /></p></a>
-                <a href={item.live}><p>Live <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' /></p></a>
+                <a href={item.github}><p className='signikaFont'>GitHub <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' /></p></a>
+                <a href={item.live}><p className='signikaFont'>Live <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' /></p></a>
               </div>
               <article className='d-flex gap-2 flex-wrap align-items-center'>
                 <div className='techBox'><p className='px-2 text-center m-0'>{item.technologies[0]}</p></div>
@@ -32,7 +32,7 @@ function Projects() {
         )
       })}
 
-    </>
+    </section>
   )
 }
 

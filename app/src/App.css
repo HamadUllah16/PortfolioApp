@@ -3,7 +3,19 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
-
+.ralewayFont{
+  font-family: "Raleway";
+  font-size: 13px;
+  color: #203A43;
+}
+.signikaFont{
+  color: #203A43;
+  font-family: "Signika";
+}
+.hammerFont{
+  color: #203A43;
+  font-family: "Hammersmith";
+}
 .headerPfp{
   max-width: 120px;
   min-width: 70px;
@@ -14,6 +26,18 @@ body{
 .headerName{
   font-family: 'Julius Sans One', sans-serif;
   font-weight:normal;
+}
+.headerSocials{
+  transition: 0.5s;
+  min-width: 100px;
+  margin: 0px 5px 0px 5px;
+  text-align: center;
+  border-radius: 50px;
+}
+.headerSocials:hover{
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  background-color: #203A43;
+  color: #eeec;
 }
 .darkMode{
   border: 1px solid black;
@@ -32,22 +56,18 @@ a{
 .btnNav{
   height: 50px;
   border: 1px solid #dee2e6;
-  transition: 0.2 s;
+  transition: 0.3s;
+  background-color: white;
 }
 .btnNav:hover{
   background-color: #dee2e6;
 }
 .active{
-  border-bottom: none;
-  background-color: white;
+  background-color: #ebeeec;
 }
 .mainContainer{
   min-height: 60vh;
-}
-
-
-.footerLogo{
-  max-height: 150px;
+  background-color: #ebeeec;
 }
 li{
   list-style-type: none;
@@ -58,9 +78,15 @@ li{
   max-width: 18rem;
   max-height: 400px;
 }
+.cardSize:hover{
+  cursor: pointer;
+}
 .projectImage{
   height: 150px;
   width: 100%;
+}
+.projectImage:hover{
+  cursor: pointer;
 }
 
 .techBox{
@@ -69,3 +95,8 @@ li{
   border-radius: 50px;
   margin: 0px 0px 5px 0px;
 }
+
+.footerLogo{
+  max-height: 150px;
+}
+

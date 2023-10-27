@@ -1,6 +1,14 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 
+const navLinks = [
+    { name: "Home", link: "/"},
+    { name: "Projects", link: "/projects"},
+    { name: "About Me", link: "/about"},
+    { name: "Tech Stack", link: "/techstack"},
+    { name: "Services", link: "/services"}
+]
+
 function Nav() {
     return (
         <>
@@ -10,22 +18,14 @@ function Nav() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="row collapse navbar-collapse" id="navbarNav">
-                        <section className='ps-4 row justify-content-center p-0'>
-                            <NavLink to={"/projects"} className='btnNav d-flex justify-content-center align-items-center col-12 col-lg-3 col-md-3p-0'>
-                                    <p className='mb-0 navText d-flex'>Projects</p>
-                            </NavLink>
-
-                            <NavLink to={"/about"} className='btnNav d-flex justify-content-center align-items-center col-12 col-lg-3 col-md-3 text-center p-0'>
-                                    <p className='mb-0 navText d-flex'>About Me</p>
-                            </NavLink>
-
-                            <NavLink to={"/techstack"} className='btnNav d-flex justify-content-center align-items-center col-12 col-lg-3 col-md-3 text-center p-0'>
-                                    <p className='mb-0 navText d-flex'>Teck Stack</p>
-                            </NavLink>
-
-                            <NavLink to={"/services"} className='btnNav d-flex justify-content-center align-items-center col-12 col-lg-3 col-md-3 text-center p-0'>
-                                    <p className='mb-0 navText d-flex'>Services</p>
-                            </NavLink>
+                        <section className='ps-4 row justify-content-evenly p-0'>
+                            {navLinks.map((item, index) => {
+                                return (
+                                    <NavLink key={index} to={item.link} className='btnNav d-flex justify-content-center align-items-center col col-sm-12 col-lg col-md '>
+                                        <p className='mb-0 hammerFont d-flex'>{item.name}</p>
+                                    </NavLink>
+                                )
+                            })}
                         </section>
                     </div>
                 </div>
