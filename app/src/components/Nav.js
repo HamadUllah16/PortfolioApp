@@ -18,11 +18,11 @@ function Nav() {
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="row collapse navbar-collapse" id="navbarNav">
-                        <section className='ps-4 row justify-content-evenly p-0'>
+                        <section className='ps-4 row row-cols-5 p-0'>
                             {navLinks.map((item, index) => {
                                 return (
-                                    <NavLink key={index} to={item.link} className='btnNav d-flex justify-content-center align-items-center col col-sm-12 col-lg col-md '>
-                                        <p className='mb-0 hammerFont d-flex'>{item.name}</p>
+                                    <NavLink key={index} to={item.link} className='btnNav col-12 col-sm-12 col-lg-2.4 col-md d-flex justify-content-center align-items-center '>
+                                        <p className='mb-0 hammerFont text-center'>{item.name}</p>
                                     </NavLink>
                                 )
                             })}

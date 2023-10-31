@@ -5,14 +5,14 @@ import { useState } from 'react'
 const pfp = '/pfp.jpg'
 
 const socialList = [
-    {name: "GitHub", link: "https://github.com/HamadUllah16/"},
-    {name: "Linkedin", link: "https://www.linkedin.com/in/hamadullah16/"},
-    {name: "Upwork", link: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6"},
-    {name: "Freelancer", link: "https://www.freelancer.com/u/HamadUllah18"}
+    { name: "GitHub", link: "https://github.com/HamadUllah16/" },
+    { name: "Linkedin", link: "https://www.linkedin.com/in/hamadullah16/" },
+    { name: "Upwork", link: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6" },
+    { name: "Freelancer", link: "https://www.freelancer.com/u/HamadUllah18" }
 ]
-const mapSocials = socialList.map((item, index)=>{
-    return(
-        <a key={index} href={item.link} target='_blank' rel='noreferrer' className='p-1 signikaFont headerSocials m-0'><p className='px-1 m-0'>{item.name} <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' className='linkIcon' /></p></a>
+const mapSocials = socialList.map((item, index) => {
+    return (
+        <a key={index} href={item.link} target='_blank' rel='noreferrer' className='p-1 signikaFont headerSocials m-0 d-flex align-items-center justify-content-center'><p className='px-1 m-0'>{item.name} <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' className='linkIcon' /></p></a>
     )
 })
 function Header() {
@@ -39,7 +39,7 @@ function Header() {
                                 <article className={`darkMode text-${dark ? "end" : "left"} px-1`} onClick={()=>setDark(!dark)} ><FontAwesomeIcon icon={faCircle} style={{color: "#fbf650"}} /></article>
                             </div>
                         </div>
-                        <div className='d-flex justify-content-end pt-1 gap-2'>
+                        <div className='d-flex flex-wrap justify-content-end pt-1 gap-2'>
                             {mapSocials}
                         </div>
                     </div>
