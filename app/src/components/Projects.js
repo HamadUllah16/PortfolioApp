@@ -1,32 +1,47 @@
-import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import littleLemon from "../misc/LittleLemonHome.png";
 import littleLemonGif from "../misc/LittleLemon.gif";
+import kensTree from "../misc/Ken's Discount Tree.png"
 const projects = [
-  { name: "Little Lemon Restaurant", description: "Little Lemon a Mediterranean restaurant, focused on traditional receipes served with modern twist.", image: littleLemon, gif: littleLemonGif, github: "https://github.com/HamadUllah16/LittleLemon-Reservations", live: "https://littlelemonchicago.vercel.app", technologies: ["React", "Bootstrap5", "CSS"] }
+  { name: "Little Lemon Restaurant", description: "Little Lemon a Mediterranean restaurant, focused on traditional receipes served with modern twist.", image: littleLemon, gif: littleLemonGif, github: "https://github.com/HamadUllah16/LittleLemon-Reservations", live: "https://littlelemonchicago.vercel.app", technologies: ["React", "Bootstrap5", "CSS", "UI/UX"] },
+
+  { name: "Ken's Discount Tree", description: "Affordable tree services in Atlanta.", image: kensTree, gif: null, github: null, live: "https://www.kensdiscounttreeservice.com", technologies: ["WordPress", "WordPress Customization"] },
+  { name: "Demolition & Hauling", description: "Family owned and operated, demolition and hauling for less has earned the reputation for providing top quality residential and commercial building demolition services to clients throughout Atlanta.", image: kensTree, gif: null, github: null, live: "https://www.kensdiscounttreeservice.com", technologies: ["WordPress", "WordPress Customization"] }
 ]
 
 
 function Projects() {
-  const [gif, setGif] = useState(littleLemon)
+  // const [gif, setGif] = useState(littleLemon)
   return (
-    <section className='d-flex align-items-center'>
+    <section className='row m-2 justify-content-sm-center gap-3'>
       {projects.map((item, index) => {
         return (
-          <div key={index} className="card shadow cardSize">
-            <img src={gif} alt='project-cover' className="card-img-top projectImage" onMouseEnter={() => setGif(item.gif)} onMouseLeave={() => setGif(item.image)} />
+          <div key={index} className="card shadow cardSize p-0 m-0 col-12 col-md-12 col-lg-6">
+            <img src={item.image} alt='project-cover' className="card-img-top projectImage"
+            // onMouseEnter={() => setGif(item.gif)} onMouseLeave={() => setGif(item.image)}
+            />
             <div className="card-body">
               <h5 className="card-title navText">{item.name}</h5>
-              <p className="card-text ralewayFont">{item.description}</p>
+              <p className="card-text ralewayFont description">{item.description}</p>
               <div className='d-flex gap-3'>
-                <a href={item.github} className='projectLink'><p className='signikaFont'>GitHub <FontAwesomeIcon className='linkIcon' icon={faArrowUpRightFromSquare} size='xs' /></p></a>
-                <a href={item.live} className='projectLink'><p className='signikaFont'>Live <FontAwesomeIcon className='linkIcon' icon={faArrowUpRightFromSquare} size='xs' /></p></a>
+                {item.github ?
+                  <a href={item.github} className='projectLink'><p className='signikaFont'>GitHub <FontAwesomeIcon className='linkIcon' icon={faArrowUpRightFromSquare} size='xs' /></p></a>
+                  :
+                  ""
+                }
+                {item.live ?
+                  <a href={item.live} className='projectLink'><p className='signikaFont'>Live <FontAwesomeIcon className='linkIcon' icon={faArrowUpRightFromSquare} size='xs' /></p></a>
+                  :
+                  ""
+                }
               </div>
-              <article className='d-flex gap-2 flex-wrap align-items-center'>
-                <div className='techBox'><p className='px-2 text-center m-0'>{item.technologies[0]}</p></div>
-                <div className='techBox'><p className='px-2 text-center m-0'>{item.technologies[1]}</p></div>
-                <div className='techBox'><p className='px-2 text-center m-0'>{item.technologies[2]}</p></div>
+              <article className='d-flex flex-wrap align-items-center'>
+                {item.technologies.map((item, index) => {
+                  return (
+                    <div key={index} className='techBox'><p className='px-2 text-center m-0'>{item}</p></div>
+                  )
+                })}
               </article>
             </div>
           </div>

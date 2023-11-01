@@ -84,7 +84,16 @@ li{
   margin: 0px 10px 10px 10px;
   padding-top: 10px;
   max-width: 18rem;
+  height: 400px;
   max-height: 400px;
+}
+.cardSize .description{
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  height: 78px;
+  overflow: hidden;
+  display: -webkit-box;
+  
 }
 .cardSize:hover{
   cursor: pointer;
@@ -96,15 +105,19 @@ li{
 .projectImage:hover{
   cursor: pointer;
 }
+.projectLink{
+  height: 30px;
+}
 .projectLink:hover .linkIcon{
   transform: scale(1.1);
 }
 
 .techBox{
   min-width: 50px;
+  max-height: 30px;
   border: 1px solid black;
   border-radius: 50px;
-  margin: 0px 0px 5px 0px;
+  margin: 0px 5px 5px 0px;
 }
 
 .footerLogo{

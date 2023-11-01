@@ -9,7 +9,7 @@ import Home from './Home'
 function MainContainer() {
   return (
     <section className='container'>
-      <section className='mainContainer border border-top-0 rounded-bottom d-flex align-items-center'>
+      <section className='mainContainer border border-top-0 rounded-bottom d-flex p-2 align-items-center'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
