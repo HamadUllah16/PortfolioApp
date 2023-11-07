@@ -27,6 +27,46 @@ body{
   font-family: 'Julius Sans One', sans-serif;
   font-weight:normal;
 }
+.toggleBG input{
+  opacity: 0;
+}
+
+.toggleBG{
+  position: relative;
+  display: inline-block;
+  height: 30px;
+  width: 50px;
+}
+.circle{
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid black;
+  border-radius: 30px;
+  background-color: #ebeeec;
+  transition: 0.3s;
+}
+.circle::before{
+  transition: 0.3s;
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  margin: 5px;
+  background-color: #203A43;
+  border-radius: 20px;
+}
+input:checked + .circle::before{
+  background-color: white;
+  transform: translateX(20px)
+}
+input:checked + .circle{
+  background-color: #203A43;
+}
 .headerSocials{
   transition: 0.5s;
   min-width: 100px;

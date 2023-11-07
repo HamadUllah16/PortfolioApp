@@ -1,7 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
-import { faCircle } from '@fortawesome/free-solid-svg-icons'
-import { useState } from 'react'
+
+
+import Switch from './Switch'
 const pfp = '/pfp.jpg'
 
 const socialList = [
@@ -16,7 +17,6 @@ const mapSocials = socialList.map((item, index) => {
     )
 })
 function Header() {
-    const [dark, setDark] = useState(false);
     return (
         <header className='container'>
             <div className='container-fluid pt-2'>
@@ -36,7 +36,8 @@ function Header() {
                     <div className='col-12 col-lg-6 col-md-6 p-0'>
                         <div className=''>
                             <div className='mb-1 mt-3 p-0 d-flex justify-content-end'>
-                                <article className={`darkMode text-${dark ? "end" : "left"} px-1`} onClick={()=>setDark(!dark)} ><FontAwesomeIcon icon={faCircle} style={{color: "#fbf650"}} /></article>
+                                <Switch />
+                                {/* <article className={`darkMode text-${dark ? "end" : "left"} px-1`} onClick={()=>setDark(!dark)} ><FontAwesomeIcon icon={faCircle} style={{color: "#fbf650"}} /></article> */}
                             </div>
                         </div>
                         <div className='d-flex flex-wrap justify-content-end pt-1 gap-2'>
