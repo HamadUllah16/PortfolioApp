@@ -3,6 +3,11 @@ body{
   padding: 0;
   box-sizing: border-box;
 }
+.App{
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.3s;
+}
 .ralewayFont{
   font-family: "Raleway";
   font-size: 13px;
@@ -163,4 +168,3 @@ li{
 .footerLogo{
   max-height: 150px;
 }
-

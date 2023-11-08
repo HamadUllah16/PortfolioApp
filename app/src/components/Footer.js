@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../App';
 const logo = "/logoMain.png"
 const date = new Date();
 function Footer() {
+    const {state} = useContext(ThemeContext);
   return (
     <footer className='container'>
         <section className='row'>
@@ -10,29 +12,29 @@ function Footer() {
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
-                    <p className='hammerFont'>Projects</p>
-                    <li className='ralewayFont'>Little Lemon</li>
-                    <li className='ralewayFont'>Yelp Camps</li>
+                    <p style={{color: state.textColor, transition: "0.3s"}} className='hammerFont'>Projects</p>
+                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Little Lemon</li>
+                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Yelp Camps</li>
                 </ul>
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
-                    <p className='hammerFont'>Services</p>
-                    <li className='ralewayFont'>SPA Development</li>
-                    <li className='ralewayFont'>Web App Development</li>
-                    <li className='ralewayFont'>UI/UX</li>
+                    <p style={{color: state.textColor, transition: "0.3s"}} className='hammerFont'>Services</p>
+                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>SPA Development</li>
+                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Web App Development</li>
+                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>UI/UX</li>
                 </ul>
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
-                    <p className='hammerFont'>Hire</p>
-                    <li className='ralewayFont'>Upwork</li>
-                    <li className='ralewayFont'>Freelancer</li>
-                    <li className='ralewayFont'>Linkedin</li>
+                    <p style={{color: state.textColor, transition: "0.3s"}} className='hammerFont'>Hire</p>
+                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Upwork</li>
+                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Freelancer</li>
+                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Linkedin</li>
                 </ul>
             </article>
-            <hr></hr>
-            <p className='ralewayFont text-center'>All rights reserved - Hamad {date.getFullYear()} </p>
+            <hr style={{color: state.textColor, transition: "0.3s"}}></hr>
+            <p style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont text-center'>All rights reserved - Hamad {date.getFullYear()} </p>
         </section>
     </footer>
   )

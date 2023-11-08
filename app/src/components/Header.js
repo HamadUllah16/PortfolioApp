@@ -3,6 +3,8 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 
 import Switch from './Switch'
+import { useContext } from 'react'
+import { ThemeContext } from '../App'
 const pfp = '/pfp.jpg'
 
 const socialList = [
@@ -11,12 +13,13 @@ const socialList = [
     { name: "Upwork", link: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6" },
     { name: "Freelancer", link: "https://www.freelancer.com/u/HamadUllah18" }
 ]
-const mapSocials = socialList.map((item, index) => {
-    return (
-        <a key={index} href={item.link} target='_blank' rel='noreferrer' className='p-1 signikaFont headerSocials m-0 d-flex align-items-center justify-content-center'><p className='px-1 m-0'>{item.name} <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' className='linkIcon' /></p></a>
-    )
-})
 function Header() {
+    const { state } = useContext(ThemeContext);
+    const mapSocials = socialList.map((item, index) => {
+        return (
+            <a key={index} href={item.link} target='_blank' rel='noreferrer' className='p-1 signikaFont headerSocials m-0 d-flex align-items-center justify-content-center'><p className='px-1 m-0'>{item.name} <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' className='linkIcon' /></p></a>
+        )
+    })
     return (
         <header className='container'>
             <div className='container-fluid pt-2'>
@@ -27,8 +30,8 @@ function Header() {
                                 <img className='img img-fluid' src={pfp} alt='' />
                             </div>
                             <div className='col text-start mt-4'>
-                                <p className='headerName mb-0'>Hamad Ullah</p>
-                                <p className='navText'>Software Engineer | MERN Stack</p>
+                                <p style={{ color: state.textColor }} className='headerName mb-0'>Hamad Ullah</p>
+                                <p style={{ color: state.textColor }} className='navText'>Software Engineer | MERN Stack</p>
                             </div>
                         </div>
                     </div>
@@ -37,7 +40,6 @@ function Header() {
                         <div className=''>
                             <div className='mb-1 mt-3 p-0 d-flex justify-content-end'>
                                 <Switch />
-                                {/* <article className={`darkMode text-${dark ? "end" : "left"} px-1`} onClick={()=>setDark(!dark)} ><FontAwesomeIcon icon={faCircle} style={{color: "#fbf650"}} /></article> */}
                             </div>
                         </div>
                         <div className='d-flex flex-wrap justify-content-end pt-1 gap-2'>
