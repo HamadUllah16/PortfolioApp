@@ -4,6 +4,7 @@ const logo = "/logoMain.png"
 const date = new Date();
 function Footer() {
     const {state} = useContext(ThemeContext);
+    const theme = state.darkMode ? "dark" : "light"
   return (
     <footer className='container'>
         <section className='row'>
@@ -12,29 +13,29 @@ function Footer() {
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
-                    <p style={{color: state.textColor, transition: "0.3s"}} className='hammerFont'>Projects</p>
-                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Little Lemon</li>
-                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Yelp Camps</li>
+                    <p className={` ${theme}Text hammerFont`}>Projects</p>
+                    <li className={`${theme}Text ralewayFont`}>Little Lemon</li>
+                    <li className={`${theme}Text ralewayFont`}>Yelp Camps</li>
                 </ul>
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
-                    <p style={{color: state.textColor, transition: "0.3s"}} className='hammerFont'>Services</p>
-                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>SPA Development</li>
-                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Web App Development</li>
-                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>UI/UX</li>
+                    <p className={`${theme}Text hammerFont`}>Services</p>
+                    <li className={`${theme}Text ralewayFont`}>SPA Development</li>
+                    <li className={`${theme}Text ralewayFont`}>Web App Development</li>
+                    <li className={`${theme}Text ralewayFont`}>UI/UX</li>
                 </ul>
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
-                    <p style={{color: state.textColor, transition: "0.3s"}} className='hammerFont'>Hire</p>
-                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Upwork</li>
-                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Freelancer</li>
-                    <li style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont'>Linkedin</li>
+                    <p className={`${state.darkMode ? "darkText" : "lightText"} hammerFont`}>Hire</p>
+                    <li className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont ralewayFont`}>Upwork</li>
+                    <li className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont ralewayFont`}>Freelancer</li>
+                    <li className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont ralewayFont`}>Linkedin</li>
                 </ul>
             </article>
-            <hr style={{color: state.textColor, transition: "0.3s"}}></hr>
-            <p style={{color: state.textColor, transition: "0.3s"}} className='ralewayFont text-center'>All rights reserved - Hamad {date.getFullYear()} </p>
+            <hr className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont`}></hr>
+            <p className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont text-center`}>All rights reserved - Hamad {date.getFullYear()} </p>
         </section>
     </footer>
   )

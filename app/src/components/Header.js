@@ -17,7 +17,7 @@ function Header() {
     const { state } = useContext(ThemeContext);
     const mapSocials = socialList.map((item, index) => {
         return (
-            <a key={index} href={item.link} target='_blank' rel='noreferrer' className='p-1 signikaFont headerSocials m-0 d-flex align-items-center justify-content-center'><p className='px-1 m-0'>{item.name} <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' className='linkIcon' /></p></a>
+            <a key={index} href={item.link} target='_blank' rel='noreferrer' className={`${state.darkMode ? "dark" : "light"}BtnText p-1 signikaFont headerSocials m-0 d-flex align-items-center justify-content-center`}><p className='px-1 m-0'>{item.name} <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' className='linkIcon' /></p></a>
         )
     })
     return (
@@ -30,8 +30,8 @@ function Header() {
                                 <img className='img img-fluid' src={pfp} alt='' />
                             </div>
                             <div className='col text-start mt-4'>
-                                <p style={{ color: state.textColor }} className='headerName mb-0'>Hamad Ullah</p>
-                                <p style={{ color: state.textColor }} className='navText'>Software Engineer | MERN Stack</p>
+                                <p className={`${state.darkMode ? "dark" : "light"}Text headerName mb-0`}>Hamad Ullah</p>
+                                <p className={`${state.darkMode ? "dark" : "light"}Text navText`}>Software Engineer | MERN Stack</p>
                             </div>
                         </div>
                     </div>

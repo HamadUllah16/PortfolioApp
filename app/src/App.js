@@ -30,7 +30,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ darkMode, toggleDarkMode, textColor: green, paneColor: greyish, bgColor: white, state, dispatch }}>
-      <section  style={{backgroundImage: `url(${state.bgImage})`, backgroundColor: state.bgColor}} className='App'>
+      <section className={`${darkMode ? "bgDark" : ""} App`}>
         <Header />
         <Nav />
         <MainContainer />
