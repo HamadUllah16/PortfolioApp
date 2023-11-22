@@ -14,8 +14,8 @@ function Nav() {
         <>
             <nav className="navbar navbar-expand-lg p-0 container mt-2">
                 <div className="container-fluid">
-                    <button className="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
+                    <button className="navbar-toggler bgLight mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className={` navbar-toggler-icon `}></span>
                     </button>
                     <div className="row collapse navbar-collapse" id="navbarNav">
                         <section className='ps-4 row row-cols-5 p-0'>

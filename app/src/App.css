@@ -12,6 +12,10 @@ body{
 .bgDark{
   background-color: #203A43;
 }
+.bgLight{
+  background-color: white;
+  color: #203A43;
+}
 .lightText{
   color: #203A43;
 }
@@ -70,9 +74,13 @@ body{
 
 .toggleBG{
   position: relative;
-  display: inline-block;
+  display: block;
   height: 30px;
   width: 50px;
+  box-shadow: inset 0px 1px 4px rgba(0,0,0,0.4), inset 0px -1px 4px rgba(255,255,255,0.4);
+  /* box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4); */
+  border-radius: 30px;
+  background-color: #ebeeec;
 }
 .circle{
   position: absolute;
@@ -82,11 +90,9 @@ body{
   top: 0;
   right: 0;
   bottom: 0;
-  /* border: 1px solid black; */
-  border-radius: 30px;
-  background-color: #ebeeec;
   transition: 0.3s;
-  box-shadow: inset rgb(204, 219, 232) 1px 1px 5px ;
+
+
 }
 .circle::before{
   transition: 0.3s;
@@ -95,15 +101,17 @@ body{
   height: 20px;
   width: 20px;
   margin: 5px;
-  background-color: #203A43;
+  /* background-color: #203a4300; */
+  box-shadow: 5px 50px 0 0 #f8b65a;
+  top: -49px;
+  left: -5px;
   border-radius: 20px;
 }
 input:checked + .circle::before{
-  background-color: white;
-  transform: translateX(20px)
-}
-input:checked + .circle{
-  background-color: #203A43;
+  transform: translateX(20px);
+  box-shadow: 7px 5px 0 0 #636363;
+  top: -4px;
+  left: -5px;
 }
 .headerSocials{
   transition: 0.5s;
@@ -203,4 +211,13 @@ li{
   max-height: 150px;
   background-color: white;
   margin: 5px 0px 5px 0px;
+}
+
+.moon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 9px 9px 0 0 #333;
+  margin-left: -25px;
+  margin-top: -25px;
 }

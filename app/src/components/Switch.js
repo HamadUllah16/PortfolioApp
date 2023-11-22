@@ -7,7 +7,7 @@ function Switch() {
     <div>
       <label className='toggleBG'>
         <input type='checkbox' onClick={toggleDarkMode} />
-        <span className='circle' />
+        <span className='circle'/>
       </label>
     </div>
   );
