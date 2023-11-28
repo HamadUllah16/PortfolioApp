@@ -18,7 +18,7 @@ function MainContainer() {
           <Route path='/services' element={<Services />} />
         </Routes>
       </section>
-    </section>
+     </section>
   )
 }
 

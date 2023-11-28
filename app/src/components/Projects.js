@@ -13,14 +13,12 @@ const projects = [
 
 
 function Projects() {
-  // const [gif, setGif] = useState(littleLemon)
   return (
     <section className='row m-2 justify-content-sm-center gap-3'>
       {projects.map((item, index) => {
         return (
           <div key={index} className="card shadow cardSize p-0 m-0 col-12 col-md-12 col-lg-6">
             <img src={item.image} alt='project-cover' className="card-img-top projectImage"
-            // onMouseEnter={() => setGif(item.gif)} onMouseLeave={() => setGif(item.image)}
             />
             <div className="card-body">
               <h5 className="card-title navText">{item.name}</h5>
