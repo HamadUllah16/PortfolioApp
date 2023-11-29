@@ -10,7 +10,7 @@ function Footer() {
     <section className='container'>
         <section className='row m-0'>
             <article className='col-12 col-lg-3 col-md-3 d-flex align-items-center justify-content-center logoBox'>
-                <img className='img img-fluid footerLogo' src={state.darkMode ? logoDark : logoMain} alt='logo' />
+                <img className='img img-fluid footerLogo' src={state.darkMode ? logoDark : logo} alt='logo' />
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
