@@ -1,23 +1,32 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 
 import Switch from './Switch'
 import { useContext } from 'react'
 import { ThemeContext } from '../App'
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
 const pfp = '/pfp.jpg'
 
 const socialList = [
-    { name: "GitHub", link: "https://github.com/HamadUllah16/" },
-    { name: "Linkedin", link: "https://www.linkedin.com/in/hamadullah16/" },
-    { name: "Upwork", link: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6" },
-    { name: "Freelancer", link: "https://www.freelancer.com/u/HamadUllah18" }
+    { name: "GitHub", link: "https://github.com/HamadUllah16/", icon: faGithub },
+    { name: "Linkedin", link: "https://www.linkedin.com/in/hamadullah16/", icon: faLinkedinIn },
+    // { name: "Upwork", link: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", icon: faUpwork },
+    // { name: "Freelancer", link: "https://www.freelancer.com/u/HamadUllah18", icon: faFreelancer }
 ]
 function Header() {
     const { state } = useContext(ThemeContext);
     const mapSocials = socialList.map((item, index) => {
         return (
-            <a key={index} href={item.link} target='_blank' rel='noreferrer' className={`${state.darkMode ? "dark" : "light"}BtnText p-1 signikaFont headerSocials m-0 d-flex align-items-center justify-content-center`}><p className='px-1 m-0'>{item.name} <FontAwesomeIcon icon={faArrowUpRightFromSquare} size='xs' className='linkIcon' /></p></a>
+            <a key={index} href={item.link} target='_blank' rel='noreferrer' >
+                <div className={`${state.darkMode ? "bgLight" : "bgDark"} p-3 signikaFont headerBtn m-0 d-flex align-items-center justify-content-center text-center`}>
+                    <div className='icon d-flex align-items-center justify-content-center'>
+                        <FontAwesomeIcon icon={item.icon} size='xl' className={`${state.darkMode ? "darkIcon" : "lightIcon"}`} />
+                    </div>
+                    <span className='socialName'>
+                        <p className={`${state.darkMode ? "lightText" : "darkText"} navText px-1 m-0`}>{item.name}</p>
+                    </span>
+                </div>
+            </a >
         )
     })
     return (

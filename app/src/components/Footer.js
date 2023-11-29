@@ -1,15 +1,16 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../App';
 const logo = "/logoMain.png"
+const logoDark = "/logoMainDark.png"
 const date = new Date();
 function Footer() {
     const {state} = useContext(ThemeContext);
     const theme = state.darkMode ? "dark" : "light"
   return (
-    <footer className='container'>
-        <section className='row'>
+    <section className='container'>
+        <section className='row m-0'>
             <article className='col-12 col-lg-3 col-md-3 d-flex align-items-center justify-content-center logoBox'>
-                <img className='img img-fluid footerLogo' src={logo} alt='logo' />
+                <img className='img img-fluid footerLogo' src={state.darkMode ? logoDark : logoMain} alt='logo' />
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
@@ -35,9 +36,9 @@ function Footer() {
                 </ul>
             </article>
             <hr className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont`}></hr>
-            <p className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont text-center`}>All rights reserved - Hamad {date.getFullYear()} </p>
+                <p className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont text-center`}>All rights reserved - Hamad {date.getFullYear()} </p>
         </section>
-    </footer>
+    </section>
   )
 }
 
