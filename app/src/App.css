@@ -173,6 +173,18 @@ body{
 /* --------------------------- */
 
 /* Social Buttons */
+.btn-light{
+  border-radius: 50px;
+  margin: 5px 0px 0px 0px;
+  transition: 0.3s ease;
+}
+.btn-light:hover{
+  box-shadow: 1px 4px 3px #3333333b;
+}
+.btn-light:active{
+  transform: scale(0.95);
+}
+
 .headerBtn{
   display: flex;
   width: 40px;
@@ -277,3 +289,14 @@ li{
   max-height: 150px;
 }
 
+/* About */
+
+li{
+  list-style-type: circle;
+}
+.link{
+}
+.link:hover{
+  transform: scale(1.1);
+
+}
