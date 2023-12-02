@@ -174,12 +174,11 @@ body{
 
 /* Social Buttons */
 .btn-light{
-  border-radius: 50px;
+  border-radius: 15px;
+  border: none;
+  background-color: white;
   margin: 5px 0px 0px 0px;
-  transition: 0.3s ease;
-}
-.btn-light:hover{
-  box-shadow: 1px 4px 3px #3333333b;
+  width: 70px;
 }
 .btn-light:active{
   transform: scale(0.95);
@@ -187,14 +186,15 @@ body{
 
 .headerBtn{
   display: flex;
+  justify-content: flex-end;
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  overflow: hidden;
-  transition: 0.3s ease-out;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0.1s;
 }
 .icon{
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 .lightIcon{
   color: white;
@@ -203,18 +203,19 @@ body{
   color: #203A43;
 }
 .headerBtn:hover{
-  width: 115px;
+  width: 120px;
   margin: 50px;
 }
-.headerBtn:hover .socialName{
-  display: flex;
-}
 .socialName{
-  display: none;
-  transition: 0.3s ease-in;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+  transition-delay: 0.2s;
 }
 
 /* -----------------------Navigation Bar----------------------- */
+.navPadding{
+  padding: 0px 12px 0px 12px;
+}
 .navText{
   font-family: 'Kanit';
 }
@@ -270,11 +271,18 @@ li{
 .projectImage:hover{
   cursor: pointer;
 }
+.linkIcon{
+  transition: 0.3s ease-out;
+}
 .projectLink{
   height: 30px;
+  transition: 0.4s ease-out;
 }
 .projectLink:hover .linkIcon{
-  transform: scale(1.1);
+  transform: translate(4px, -4px);
+}
+.projectLink:hover{
+  text-decoration: underline;
 }
 
 .techBox{
@@ -294,9 +302,29 @@ li{
 li{
   list-style-type: circle;
 }
-.link{
+.hireBtn{
+  background-color: white;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
-.link:hover{
-  transform: scale(1.1);
-
+.hireBtn p{
+  color: white;
+  margin: 0px 0px 0px 0px;
+}
+.hireBtn img{
+  height: 17px;
+}
+.hireBtn:hover{
+  border-radius: 20px;
+}
+.hireBtn:active img{
+  transform: scale(0.97);
+  transform-origin: center;
 }

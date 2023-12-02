@@ -14,10 +14,10 @@ const techStack = [
 
 function TechStack() {
   return (
-    <section className='row gap-4 m-2' style={{ width: "100%" }}>
+    <section className='row gap-4 m-2 justify-content-md-center' style={{ width: "100%" }}>
       {techStack.map((item, index) => {
         return (
-          <article key={index} className='col-6 col-lg-6 col-md-6 col-sm-6 p-0 card rounded-3' style={{maxWidth: "400px"}}>
+          <article key={index} className='col-12 col-lg-6 col-md-6 col-sm-12 p-0 card rounded-3' style={{maxWidth: "400px"}}>
             <div className='bgDark rounded-top'>
               <p className='text-center darkText m-2'>{item.name}</p>
             </div>

@@ -1,20 +1,38 @@
 import frontEndCertificate from "../misc/meta-front-end-developer-certificate.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import upwork from "../misc/upworkGreen.png"
+import linkedin from "../misc/linkedin.png"
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 function About() {
   return (
-    <section className='row'>
+    <section className='row gap-2 mx-3'>
 
-      <article className='col mx-4'>
+      <article className='col-12 col-lg-6 col-md-6 col-sm-12'>
         <h4 className='navText fs-3'>Hi I'm Hamad</h4>
-        <p className='fs-5 ralewayFont'>A Software Engineer who likes to build amazing web applications using latest technologies and frameworks. I obsess over systematic and conventional way of building web applications to:</p>
-        <ul>
+        <p className='fs-5 ralewayFont mb-1'>A Software Engineer who likes to build amazing web applications using latest technologies and frameworks. I obsess over systematic and conventional way of building web applications to:</p>
+        <ul className="mb-2">
           <li className='ralewayFont fs-6'>Ensure applications serves its purpose.</li>
           <li className='ralewayFont fs-6'>Emphasize on efficiency and reliablability.</li>
           <li className='ralewayFont fs-6'>Provide exceptional user experiences.</li>
         </ul>
 
+        <article>
+          <p className="ralewayFont fs-6 mb-2">Want to learn more about my services? <span className="text-decoration-underline">Get in touch:</span></p>
+          <div className="d-flex gap-2">
+            <a>
+              <div className="hireBtn">
+                <img className="upworkIcon" src={upwork} alt="upwork logo" />
+              </div>
+            </a>
+            <a>
+              <div className="hireBtn">
+                <img className="linkedinIcon" src={linkedin} alt="upwork logo" />
+              </div>
+            </a>
+          </div>
+        </article>
+        <hr></hr>
       </article>
 
       <article className='col'>
@@ -37,7 +55,7 @@ function About() {
           ">Certifications:</h5>
           <div className='row ralewayFont fs-6'>
             <div className='col'>
-              <a className="link" href="https://www.coursera.org/programs/dlsei-phase-2b-iigii/professional-certificates/meta-front-end-developer">Meta Front-End Specialization <FontAwesomeIcon icon={faArrowUpRightFromSquare} style={{ color: "#000000", }} /></a>
+              <a className="projectLink" target="_blank" rel="noreferrer" href="https://www.coursera.org/programs/dlsei-phase-2b-iigii/professional-certificates/meta-front-end-developer">Meta Front-End Specialization <FontAwesomeIcon className="linkIcon" size="xs" icon={faArrowUpRightFromSquare} style={{ color: "#000000", }} /></a>
             </div>
             <div className='col'>
               <div className='row'>
@@ -50,7 +68,7 @@ function About() {
                     <img src={frontEndCertificate} style={{ maxWidth: "100px" }} alt='certificate' /><br></br>
                   </a>
                   <a href='https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url' target='_blank' rel="noreferrer">
-                    <button className='btn-light'>Verify</button>
+                    <p className='btn-light text-center'>Verify</p>
                   </a>
 
                 </div>

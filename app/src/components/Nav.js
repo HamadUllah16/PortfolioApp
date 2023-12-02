@@ -12,8 +12,8 @@ const navLinks = [
 function Nav() {
     return (
         <>
-            <nav className="navbar navbar-expand-lg p-0 container mt-2">
-                <div className="container-fluid">
+            <div className="container navbar navbar-expand-lg navPadding mt-2 ">
+                <div className="container-fluid p-0 ">
                     <button className="navbar-toggler bgLight mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className={` navbar-toggler-icon `}></span>
                     </button>
@@ -29,7 +29,7 @@ function Nav() {
                         </section>
                     </div>
                 </div>
-            </nav >
+            </div>
         </>
     )
 }

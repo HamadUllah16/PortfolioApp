@@ -1,15 +1,13 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
-
 import Switch from './Switch'
 import { useContext } from 'react'
 import { ThemeContext } from '../App'
-import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 const pfp = '/pfp.jpg'
 
 const socialList = [
     { name: "GitHub", link: "https://github.com/HamadUllah16/", icon: faGithub },
-    { name: "Linkedin", link: "https://www.linkedin.com/in/hamadullah16/", icon: faLinkedinIn },
+    { name: "Linkedin", link: "https://www.linkedin.com/in/hamadullah16/", icon: faLinkedin },
     // { name: "Upwork", link: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", icon: faUpwork },
     // { name: "Freelancer", link: "https://www.freelancer.com/u/HamadUllah18", icon: faFreelancer }
 ]
