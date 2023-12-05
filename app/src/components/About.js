@@ -13,7 +13,7 @@ function About() {
         <p className='fs-5 ralewayFont mb-1'>A Software Engineer who likes to build amazing web applications using latest technologies and frameworks. I obsess over systematic and conventional way of building web applications to:</p>
         <ul className="mb-2">
           <li className='ralewayFont fs-6'>Ensure applications serves its purpose.</li>
-          <li className='ralewayFont fs-6'>Emphasize on efficiency and reliablability.</li>
+          <li className='ralewayFont fs-6'>Emphasize on efficiency and reliability.</li>
           <li className='ralewayFont fs-6'>Provide exceptional user experiences.</li>
         </ul>
 
@@ -55,7 +55,7 @@ function About() {
           ">Certifications:</h5>
           <div className='row ralewayFont fs-6'>
             <div className='col'>
-              <a className="projectLink" target="_blank" rel="noreferrer" href="https://www.coursera.org/programs/dlsei-phase-2b-iigii/professional-certificates/meta-front-end-developer">Meta Front-End Specialization <FontAwesomeIcon className="linkIcon" size="xs" icon={faArrowUpRightFromSquare} style={{ color: "#000000", }} /></a>
+              <a className="projectLink d-flex gap-1" target="_blank" rel="noreferrer" href="https://www.coursera.org/programs/dlsei-phase-2b-iigii/professional-certificates/meta-front-end-developer"><span>Meta Front-End Specialization</span><FontAwesomeIcon className="linkIcon" size="xs" icon={faArrowUpRightFromSquare} style={{ color: "#000000", }} /></a>
             </div>
             <div className='col'>
               <div className='row'>
@@ -63,13 +63,15 @@ function About() {
                   <p className='m-0'>Coursera</p>
                   <p>2023</p>
                 </div>
-                <div className='col'>
-                  <a href="https://www.coursera.org/account/accomplishments/professional-cert/9DHKPLDZT64B" target="_blank" rel="noreferrer">
-                    <img src={frontEndCertificate} style={{ maxWidth: "100px" }} alt='certificate' /><br></br>
-                  </a>
-                  <a href='https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url' target='_blank' rel="noreferrer">
-                    <p className='btn-light text-center'>Verify</p>
-                  </a>
+                <div className='col justify-content-center'>
+                  <div style={{maxWidth: "100px"}}>
+                    <a href="https://www.coursera.org/account/accomplishments/professional-cert/9DHKPLDZT64B" target="_blank" rel="noreferrer">
+                      <img src={frontEndCertificate} className="certificate" alt='certificate' /><br></br>
+                    </a>
+                    <a href='https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url' target='_blank' rel="noreferrer">
+                      <p className='btn-light text-center'>Verify</p>
+                    </a>
+                  </div>
 
                 </div>
               </div>

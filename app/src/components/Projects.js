@@ -4,6 +4,7 @@ import littleLemon from "../misc/LittleLemonHome.jpg";
 import littleLemonGif from "../misc/LittleLemon.gif";
 import kensTree from "../misc/Ken's Discount Tree.jpg"
 import demolition from "../misc/demolition.jpg"
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 const projects = [
   { name: "Little Lemon Restaurant", description: "Little Lemon a Mediterranean restaurant, focused on traditional receipes served with modern twist.", image: littleLemon, gif: littleLemonGif, github: "https://github.com/HamadUllah16/LittleLemon-Reservations", live: "https://littlelemonchicago.vercel.app", technologies: ["React", "Bootstrap5", "CSS", "UI/UX"] },
 
@@ -21,27 +22,32 @@ function Projects() {
             <img src={item.image} alt='project-cover' className="card-img-top projectImage"
             />
             <div className="card-body">
-              <h5 className="card-title navText">{item.name}</h5>
-              <p className="card-text ralewayFont description">{item.description}</p>
-              <div className='d-flex gap-3'>
-                {item.github ?
-                  <a href={item.github} className='projectLink'><p className='signikaFont'>GitHub <FontAwesomeIcon className='linkIcon' icon={faArrowUpRightFromSquare} size='xs' /></p></a>
-                  :
-                  ""
-                }
-                {item.live ?
-                  <a href={item.live} className='projectLink'><p className='signikaFont'>Live <FontAwesomeIcon className='linkIcon' icon={faArrowUpRightFromSquare} size='xs' /></p></a>
-                  :
-                  ""
-                }
-              </div>
-              <article className='d-flex flex-wrap align-items-center'>
-                {item.technologies.map((item, index) => {
-                  return (
-                    <div key={index} className='techBox'><p className='px-2 text-center m-0'>{item}</p></div>
-                  )
-                })}
-              </article>
+              {/* <a href={item.live} target='_blank' rel='noreferrer'> */}
+
+                <h5 className="card-title navText d-flex justify-content-between align-items-center gap-2"><p className='fs-6 p-0 m-0'>{item.name}</p>
+                {/* <div> <FontAwesomeIcon href={item.github} icon={faGithub} className='gitRepo' size='xs' /> <FontAwesomeIcon icon={faArrowUpRightFromSquare} size="2xs" className='linkIcon' /></div> */}
+                </h5>
+                <p className="card-text ralewayFont description">{item.description}</p>
+                <div className='d-flex gap-3'>
+                  {item.github ?
+                    <a href={item.github} className='projectLink'><p className='signikaFont'>GitHub <FontAwesomeIcon className='linkIcon' icon={faArrowUpRightFromSquare} size='xs' /></p></a>
+                    :
+                    ""
+                  }
+                  {item.live ?
+                    <a href={item.live} className='projectLink'><p className='signikaFont'>Live <FontAwesomeIcon className='linkIcon' icon={faArrowUpRightFromSquare} size='xs' /></p></a>
+                    :
+                    ""
+                  }
+                </div>
+                <article className='d-flex flex-wrap align-items-center'>
+                  {item.technologies.map((item, index) => {
+                    return (
+                      <div key={index} className='techBox'><p className='px-2 text-center m-0'>{item}</p></div>
+                    )
+                  })}
+                </article>
+              {/* </a> */}
             </div>
           </div>
         )

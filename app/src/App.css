@@ -9,6 +9,12 @@ body{
   transition: 0.3s;
 }
 /* -------------Theme Colors------------ */
+.bgDarkCustom{
+  transition: 0.3s ease-in;
+  background-image: url('./misc/bgDarkCustom.jpg');
+  background-size: contain;
+}
+
 .bgDark{
   background-color: #203A43;
 }
@@ -178,7 +184,7 @@ body{
   border: none;
   background-color: white;
   margin: 5px 0px 0px 0px;
-  width: 70px;
+  width: 100%;
 }
 .btn-light:active{
   transform: scale(0.95);
@@ -284,6 +290,12 @@ li{
 .projectLink:hover{
   text-decoration: underline;
 }
+.card-body:hover  .card-title .linkIcon{
+  transform: translate(4px, -4px);
+}
+.gitRepo:hover .card-title .linkIcon{
+  transform: translate(-4px,+4px);
+}
 
 .techBox{
   min-width: 50px;
@@ -327,4 +339,7 @@ li{
 .hireBtn:active img{
   transform: scale(0.97);
   transform-origin: center;
+}
+.certificate{
+  max-width: 100%;
 }
