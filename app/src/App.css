@@ -253,6 +253,7 @@ a{
 li{
   list-style-type: none;
 }
+/* Projects */
 .cardSize{
   margin: 0px 10px 10px 10px;
   padding-top: 10px;
@@ -277,6 +278,18 @@ li{
 .projectImage:hover{
   cursor: pointer;
 }
+.card{
+  box-shadow: 2px 3px 10px 0px #9f9f9f6e;
+  transition: 0.3s ease-in-out
+}
+.card:hover{
+  transform: scale(1.03);
+  box-shadow: 2px 3px 10px 0px #9f9f9f6e;
+}
+.notHover{
+  opacity: 0.8;
+}
+
 .linkIcon{
   transition: 0.3s ease-out;
 }
@@ -290,13 +303,9 @@ li{
 .projectLink:hover{
   text-decoration: underline;
 }
-.card-body:hover  .card-title .linkIcon{
+.card:hover .card-title .linkIcon{
   transform: translate(4px, -4px);
 }
-.gitRepo:hover .card-title .linkIcon{
-  transform: translate(-4px,+4px);
-}
-
 .techBox{
   min-width: 50px;
   max-height: 30px;
