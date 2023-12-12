@@ -9,6 +9,7 @@ const techStack = [
   { name: "Express", icon: express, custom: true },
   { name: "Javascript", icon: faJs, custom: false },
   { name: "Figma", icon: faFigma, custom: false },
+  // { name: "React Native", icon: faReact, custom: false },
   { name: "HTML5", icon: faHtml5, custom: false },
   { name: "CSS3", icon: faCss3, custom: false },
   { name: "Python", icon: faPython, custom: false },
@@ -27,8 +28,11 @@ function TechStack() {
         <article className='row gap-3 m-1'>
           {techStack.map((item, index) => {
             return (
-              <article className='col-3 col-sm-3 col-lg-2 col-md-3 text-center' key={index}>
-                {item.custom ? <img src={item.icon} style={{maxWidth: "60px"}} /> : <FontAwesomeIcon icon={item.icon} size="4x" />}
+              <article className='skillIcon col-3 col-sm-3 col-lg-2 col-md-3' key={index}>
+                <article className='d-flex justify-content-center align-items-center'>
+                  {item.custom ? <img src={item.icon} alt='skill' style={{ maxWidth: "60px" }} /> : <FontAwesomeIcon icon={item.icon} size="4x" />}
+                </article>
+                {/* <p className='text-center ralewayFont skillTitle'>{item.name}</p> */}
               </article>
             )
           })}

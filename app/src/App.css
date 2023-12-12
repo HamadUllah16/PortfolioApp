@@ -20,13 +20,12 @@ body{
 }
 .bgLight{
   background-color: white;
-  color: #203A43;
 }
 .lightText{
-  color: #203A43;
+  color: white;
 }
 .darkText{
-  color: white;
+  color: #203A43;
 }
 .lightBtnText:hover{
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -55,6 +54,23 @@ body{
 
 /* --------------------------------------------- */
 
+/* ---------------Scroll Bar------------------- */
+
+::-webkit-scrollbar{
+  width: auto;
+  background-color: #ebeeec00;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track{
+  background-color: #203a4300;
+  transition: 0.3s ease-in-out;
+  width: 10px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #203A43;
+  border: 2px solid white;
+  border-radius: 10px;
+}
 
 /* --------------------------Header CSS---------------- */
 .headerPfp{
@@ -80,7 +96,6 @@ body{
   height: 30px;
   width: 50px;
   box-shadow: inset 0px 1px 4px rgba(0,0,0,0.4), inset 0px -1px 4px rgba(255,255,255,0.4);
-  /* box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4); */
   border-radius: 30px;
   background-color: #ebeeec;
 }
@@ -144,9 +159,9 @@ body{
   height: 30px;
   width: 60px;
   box-shadow: inset 0px 1px 4px rgba(0,0,0,0.4), inset 0px -1px 4px rgba(255,255,255,0.4);
-  /* box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255,255,255,0.4); */
   border-radius: 30px;
   background-color: #ebeeec;
+  cursor: pointer;
 }
 .selector{
   display: inline-block;
@@ -156,21 +171,23 @@ body{
 .switch{
   position: absolute;
   background-color: #203A43;
+  border: 1px solid white;
   width: 30px;
   height: 30px;
   border-radius: 20px;
   left: 0;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-out;
 }
 .Sun{
   padding: 5px 14px 0px 4px;
 }
 .Moon{
   color: #203A43;
-  transition: 0.3s ease;
+  transition: 0.4s ease-out;
 }
 .toggleBg input:checked + .switch{
-  background-color: gray;
+  background-color: #27374D;
+  
   left: 30px;
 }
 .toggleBg input:checked ~ .selector .Moon{
@@ -196,11 +213,12 @@ body{
   width: 40px;
   height: 40px;
   border-radius: 40px;
-  transition: 0.3s ease-in-out;
-  transition-delay: 0.1s;
+  padding: 16px;
+  transition: 0.4s ease-out;
+  transition-delay: 0.2s;
 }
 .icon{
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-out;
 }
 .lightIcon{
   color: white;
@@ -209,12 +227,13 @@ body{
   color: #203A43;
 }
 .headerBtn:hover{
-  width: 120px;
+  width: 100px;
   margin: 50px;
+  padding: 0px;
 }
 .socialName{
   overflow: hidden;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease-out;
   transition-delay: 0.2s;
 }
 
@@ -337,13 +356,13 @@ li{
 }
 .hireBtn p{
   color: white;
-  margin: 0px 0px 0px 0px;
 }
 .hireBtn img{
   height: 17px;
 }
 .hireBtn:hover{
   border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.19) 1px 2px 8px;
 }
 .hireBtn:active img{
   transform: scale(0.97);
@@ -351,4 +370,11 @@ li{
 }
 .certificate{
   max-width: 100%;
+}
+
+/* --------------------Tech Stack---------------------- */
+.customSkillIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

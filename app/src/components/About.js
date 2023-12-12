@@ -20,14 +20,14 @@ function About() {
         <article>
           <p className="ralewayFont fs-6 mb-2">Want to learn more about my services? <span className="text-decoration-underline">Get in touch:</span></p>
           <div className="d-flex gap-2">
-            <a>
+            <a href="https://www.upwork.com/freelancers/~019b0b1b1406a889c6">
               <div className="hireBtn">
                 <img className="upworkIcon" src={upwork} alt="upwork logo" />
               </div>
             </a>
-            <a>
+            <a href="https://www.linkedin.com/in/hamadullah16/">
               <div className="hireBtn">
-                <img className="linkedinIcon" src={linkedin} alt="upwork logo" />
+                <img className="linkedinIcon" src={linkedin} alt="linkedin logo" />
               </div>
             </a>
           </div>
@@ -69,7 +69,7 @@ function About() {
                       <img src={frontEndCertificate} className="certificate" alt='certificate' /><br></br>
                     </a>
                     <a href='https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url' target='_blank' rel="noreferrer">
-                      <p className='btn-light text-center'>Verify</p>
+                      <p className='btn-light text-center ralewayFont'>Verify</p>
                     </a>
                   </div>
 

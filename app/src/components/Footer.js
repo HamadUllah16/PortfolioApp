@@ -5,7 +5,7 @@ const logoDark = "/logoMainDark.png"
 const date = new Date();
 function Footer() {
     const {state} = useContext(ThemeContext);
-    const theme = state.darkMode ? "dark" : "light"
+    const theme = state.darkMode ? "lightText" : "darkText"
   return (
     <section className='container'>
         <section className='row m-0'>
@@ -14,29 +14,29 @@ function Footer() {
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
-                    <p className={` ${theme}Text hammerFont`}>Projects</p>
-                    <li className={`${theme}Text ralewayFont`}>Little Lemon</li>
-                    <li className={`${theme}Text ralewayFont`}>Yelp Camps</li>
+                    <p className={` ${theme} hammerFont`}>Projects</p>
+                    <li className={`${theme} ralewayFont`}>Little Lemon</li>
+                    <li className={`${theme} ralewayFont`}>Yelp Camps</li>
                 </ul>
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
-                    <p className={`${theme}Text hammerFont`}>Services</p>
-                    <li className={`${theme}Text ralewayFont`}>SPA Development</li>
-                    <li className={`${theme}Text ralewayFont`}>Web App Development</li>
-                    <li className={`${theme}Text ralewayFont`}>UI/UX</li>
+                    <p className={`${theme} hammerFont`}>Services</p>
+                    <li className={`${theme} ralewayFont`}>SPA Development</li>
+                    <li className={`${theme} ralewayFont`}>Web App Development</li>
+                    <li className={`${theme} ralewayFont`}>UI/UX</li>
                 </ul>
             </article>
             <article className='col-4 col-lg-3 col-md-3 mt-3'>
                 <ul>
-                    <p className={`${state.darkMode ? "darkText" : "lightText"} hammerFont`}>Hire</p>
-                    <li className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont ralewayFont`}>Upwork</li>
-                    <li className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont ralewayFont`}>Freelancer</li>
-                    <li className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont ralewayFont`}>Linkedin</li>
+                    <p className={`${theme} hammerFont`}>Hire</p>
+                    <li className={`${theme} ralewayFont ralewayFont`}>Upwork</li>
+                    <li className={`${theme} ralewayFont ralewayFont`}>Freelancer</li>
+                    <li className={`${theme} ralewayFont ralewayFont`}>Linkedin</li>
                 </ul>
             </article>
-            <hr className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont`}></hr>
-                <p className={`${state.darkMode ? "darkText" : "lightText"} ralewayFont text-center`}>All rights reserved - Hamad {date.getFullYear()} </p>
+            <hr className={`${theme} ralewayFont`}></hr>
+                <p className={`${theme} ralewayFont text-center`}>All rights reserved - Hamad {date.getFullYear()} </p>
         </section>
     </section>
   )

@@ -16,7 +16,7 @@ const projects = [
 
 function Projects() {
   return (
-    <section className='projectRow row m-2 justify-content-sm-center justify-content-center gap-3'>
+    <section className='projectRow row m-2 justify-content-sm-center justify-content-lg-start justify-content-center gap-3'>
       {projects.map((item, index) => {
         return (
           <a href={item.live} key={index} target='_blank' rel='noreferrer' className="card cardSize p-0 m-0 col-12 col-md-12 col-lg-6">

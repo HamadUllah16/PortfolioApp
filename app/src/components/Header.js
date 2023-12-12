@@ -15,15 +15,16 @@ const socialList = [
 ]
 function Header() {
     const { state } = useContext(ThemeContext);
+    const textColor = state.darkMode ? "lightText" : "darkText";
     const mapSocials = socialList.map((item, index) => {
         return (
             <a key={index} href={item.link} target='_blank' rel='noreferrer' >
-                <div className={`${state.darkMode ? "bgLight" : "bgDark"} p-3 signikaFont headerBtn m-0 d-flex align-items-center justify-content-center text-center`}>
+                <div className={`signikaFont headerBtn m-0 d-flex align-items-center justify-content-center text-center`}>
                     <div className='icon d-flex align-items-center justify-content-center'>
-                        <FontAwesomeIcon icon={item.icon} size='xl' className={`${state.darkMode ? "darkIcon" : "lightIcon"}`} />
+                        <FontAwesomeIcon icon={item.icon} size='xl' className={`${state.darkMode ? "lightIcon" : "darkIcon"}`} />
                     </div>
                     <span className='socialName'>
-                        <p className={`${state.darkMode ? "lightText" : "darkText"} navText px-1 m-0`}>{item.name}</p>
+                        <p className={`${textColor} navText px-1 m-0`}>{item.name}</p>
                     </span>
                 </div>
             </a >
@@ -39,8 +40,8 @@ function Header() {
                                 <img className='img img-fluid' src={pfp} alt='' />
                             </div>
                             <div className='col text-start mt-4'>
-                                <p className={`${state.darkMode ? "dark" : "light"}Text headerName mb-0`}>Hamad Ullah</p>
-                                <p className={`${state.darkMode ? "dark" : "light"}Text navText`}>Software Engineer | MERN Stack</p>
+                                <p className={`${textColor} headerName mb-0`}>Hamad Ullah</p>
+                                <p className={`${textColor} navText`}>Software Engineer</p>
                             </div>
                         </div>
                     </div>
@@ -51,7 +52,7 @@ function Header() {
                                 <Switch />
                             </div>
                         </div>
-                        <div className='d-flex flex-wrap justify-content-end pt-1 gap-2'>
+                        <div className='d-flex flex-wrap justify-content-end pt-1'>
                             {mapSocials}
                         </div>
                     </div>
