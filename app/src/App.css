@@ -162,6 +162,7 @@ body{
   border-radius: 30px;
   background-color: #ebeeec;
   cursor: pointer;
+  overflow: hidden;
 }
 .selector{
   display: inline-block;
@@ -180,18 +181,24 @@ body{
 }
 .Sun{
   padding: 5px 14px 0px 4px;
+  transition: 0.5s ease-out;
 }
 .Moon{
+  position: relative;
   color: #203A43;
   transition: 0.4s ease-out;
+  top: 30px;
 }
 .toggleBg input:checked + .switch{
   background-color: #27374D;
-  
   left: 30px;
 }
 .toggleBg input:checked ~ .selector .Moon{
   color: white;
+  top: 0px;
+}
+.toggleBg input:checked ~ .selector .Sun{
+  transform: translateY(30px);
 }
 /* --------------------------- */
 
@@ -279,6 +286,7 @@ li{
   max-width: 18rem;
   height: 400px;
   max-height: 400px;
+  transition: 0.4s ease-in;
 }
 .cardSize .description{
   -webkit-line-clamp: 4;

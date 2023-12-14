@@ -5,6 +5,7 @@ import littleLemonGif from "../misc/LittleLemon.gif";
 import kensTree from "../misc/Ken's Discount Tree.jpg"
 import demolition from "../misc/demolition.jpg"
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { motion } from "framer-motion"
 const projects = [
   { name: "Little Lemon Restaurant", description: "Little Lemon a Mediterranean restaurant, focused on traditional receipes served with modern twist.", image: littleLemon, gif: littleLemonGif, github: "https://github.com/HamadUllah16/LittleLemon-Reservations", live: "https://littlelemonchicago.vercel.app", technologies: ["React", "Bootstrap5", "CSS", "UI/UX"] },
 
@@ -16,10 +17,12 @@ const projects = [
 
 function Projects() {
   return (
-    <section className='projectRow row m-2 justify-content-sm-center justify-content-lg-start justify-content-center gap-3'>
+    <motion.section className='projectRow row m-2 justify-content-sm-center justify-content-lg-start justify-content-center gap-3'>
       {projects.map((item, index) => {
         return (
-          <a href={item.live} key={index} target='_blank' rel='noreferrer' className="card cardSize p-0 m-0 col-12 col-md-12 col-lg-6">
+          <motion.a initial={{ transform: "scale(0)" }} animate={{ transform: "scale(1)", origin: "left"}} transition={{duration: 0.5 , type: "spring"}}
+
+            href={item.live} key={index} target='_blank' rel='noreferrer' className="card cardSize p-0 m-0 col-12 col-md-12 col-lg-6">
             <img src={item.image} alt='project-cover' className="card-img-top projectImage"
             />
             <div className="card-body">
@@ -47,11 +50,11 @@ function Projects() {
                 })}
               </article>
             </div>
-          </a>
+          </motion.a>
         )
       })}
 
-    </section>
+    </motion.section>
   )
 }
 

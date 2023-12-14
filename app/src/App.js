@@ -21,9 +21,9 @@ export const ThemeContext = createContext({
 function App() {
   const [darkMode, setDarkMode] = useState(false);
 
-  function toggleDarkMode(){
+  function toggleDarkMode() {
     setDarkMode(!darkMode);
-    dispatch({type: darkMode ? "LightMode" : "DarkMode"})
+    dispatch({ type: darkMode ? "LightMode" : "DarkMode" })
   };
 
   const [state, dispatch] = useReducer(reducer, intitalState);
