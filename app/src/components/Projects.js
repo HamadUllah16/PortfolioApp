@@ -16,11 +16,30 @@ const projects = [
 
 
 function Projects() {
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.3,
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const cards = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
   return (
-    <motion.section className='projectRow row m-2 justify-content-sm-center justify-content-lg-start justify-content-center gap-3'>
+    <motion.section variants={container} initial={"hidden"} animate={"visible"} className='projectRow row m-2 justify-content-sm-center justify-content-lg-start justify-content-center gap-3'>
       {projects.map((item, index) => {
         return (
-          <motion.a initial={{ transform: "scale(0)" }} animate={{ transform: "scale(1)", origin: "left"}} transition={{duration: 0.5 , type: "spring"}}
+          <motion.a variants={cards} whileHover={{scale: 1.05}}
 
             href={item.live} key={index} target='_blank' rel='noreferrer' className="card cardSize p-0 m-0 col-12 col-md-12 col-lg-6">
             <img src={item.image} alt='project-cover' className="card-img-top projectImage"

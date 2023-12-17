@@ -3,10 +3,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import upwork from "../misc/upworkGreen.png"
 import linkedin from "../misc/linkedin.png"
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 function About() {
   return (
-    <section className='row gap-2 mx-3'>
+    <motion.section initial={{ opacity: 0 }} animate={{opacity: 1}} transition={{duration: 0.5}} className='row gap-2 mx-3'>
 
       <article className='col-12 col-lg-6 col-md-6 col-sm-12'>
         <h4 className='navText fs-3'>Hi I'm Hamad</h4>
@@ -81,7 +82,7 @@ function About() {
 
       </article>
 
-    </section>
+    </motion.section>
   )
 }
 
