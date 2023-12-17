@@ -6,6 +6,7 @@ import MainContainer from './components/MainContainer';
 import Footer from './components/Footer';
 import { createContext, useState, useReducer } from 'react';
 import { intitalState, reducer } from './components/reducer';
+import { motion } from 'framer-motion';
 const greyish = "#ebeeec"
 const white = "#ffffff"
 const green = "#203A43"
@@ -30,12 +31,12 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ darkMode, toggleDarkMode, textColor: green, paneColor: greyish, bgColor: white, state, dispatch }}>
-      <section className={`${darkMode ? "bgDark" : ""} App`}>
+      <motion.section layout initial={{ opacity: 0 }} animate={{opacity: 1}} transition={{duration: 0.5, delayChildren: 0.2}}  className={`${darkMode ? "bgDark" : ""} App`}>
         <Header />
         <Nav />
         <MainContainer />
         <Footer />
-      </section>
+      </motion.section>
     </ThemeContext.Provider>
   );
 }

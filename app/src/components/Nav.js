@@ -1,5 +1,6 @@
-import React from 'react'
+// import React, { useContext } from 'react'
 import { NavLink } from 'react-router-dom'
+// import { ThemeContext } from '../App'
 
 const navLinks = [
     { name: "Home", link: "/"},
@@ -10,6 +11,8 @@ const navLinks = [
 ]
 
 function Nav() {
+    // const {state} = useContext(ThemeContext);
+    // const dark = state.darkMode ? {backgroundColor: "#203A43", color: "white"} : {backgroundColor: "white", color: "#203A43"};
     return (
         <>
             <div className="container navbar navbar-expand-lg navPadding mt-2 ">
@@ -17,11 +20,11 @@ function Nav() {
                     <button className="navbar-toggler bgLight mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className={` navbar-toggler-icon `}></span>
                     </button>
-                    <div className="row collapse navbar-collapse" id="navbarNav">
-                        <section className='ps-4 row row-cols-5 p-0'>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <section className='mx-0 row container-fluid p-0'>
                             {navLinks.map((item, index) => {
                                 return (
-                                    <NavLink key={index} to={item.link} className='btnNav col-12 col-sm-12 col-lg-2.4 col-md d-flex justify-content-center align-items-center '>
+                                    <NavLink key={index} to={item.link}  className='btnNav col-12 col-sm-12 col-lg col-md d-flex justify-content-center align-items-center '>
                                         <p className='mb-0 hammerFont text-center'>{item.name}</p>
                                     </NavLink>
                                 )
