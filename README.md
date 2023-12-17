@@ -1,4 +1,4 @@
-<h3>Portfolio Application</h3>
+<h3 style="text-align: center">Portfolio Application</h3>
 
 <h5>Description:</h5>
 <p>A personalized portfolio application built with the help of React to showcase resume and projects.</p>
