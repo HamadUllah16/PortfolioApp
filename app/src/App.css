@@ -1,54 +1,64 @@
-body{
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.App{
+
+.App {
   background-repeat: no-repeat;
   background-size: cover;
   transition: 0.3s;
 }
+
 /* -------------Theme Colors------------ */
-.bgDarkCustom{
+.bgDarkCustom {
   transition: 0.3s ease-in;
   background-image: url('./misc/bgDarkCustom.jpg');
   background-size: contain;
 }
 
-.bgDark{
+.bgDark {
   background-color: #203A43;
 }
-.bgLight{
+
+.bgLight {
   background-color: white;
 }
-.lightText{
+
+.lightText {
   color: white;
 }
-.darkText{
+
+.darkText {
   color: #203A43;
 }
-.lightBtnText:hover{
+
+.lightBtnText:hover {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   background-color: #203A43;
   color: #eeec;
 }
-.darkBtnText:hover{
+
+.darkBtnText:hover {
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   background-color: white;
   color: #203A43;
 }
+
 /* ------------------------ */
 
 
 /* -----------------Fonts------------------- */
-.ralewayFont{
+.ralewayFont {
   font-family: "Raleway";
   font-size: 13px;
 }
-.signikaFont{
+
+.signikaFont {
   font-family: "Signika";
 }
-.hammerFont{
+
+.hammerFont {
   font-family: "Hammersmith";
 }
 
@@ -56,50 +66,55 @@ body{
 
 /* ---------------Scroll Bar------------------- */
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: auto;
   background-color: #ebeeec00;
   border-radius: 10px;
 }
-::-webkit-scrollbar-track{
+
+::-webkit-scrollbar-track {
   background-color: #203a4300;
   transition: 0.3s ease-in-out;
   width: 10px;
 }
-::-webkit-scrollbar-thumb{
+
+::-webkit-scrollbar-thumb {
   background-color: #203A43;
   border: 2px solid white;
   border-radius: 10px;
 }
 
 /* --------------------------Header CSS---------------- */
-.headerPfp{
+.headerPfp {
   max-width: 120px;
   min-width: 70px;
 }
-.headerPfp img{
+
+.headerPfp img {
   border-radius: 80px;
 }
-.headerName{
+
+.headerName {
   font-family: 'Julius Sans One', sans-serif;
-  font-weight:normal;
+  font-weight: normal;
 }
 
 /* Toggle Theme */
-.toggleBG input{
+.toggleBG input {
   opacity: 0;
 }
 
-.toggleBG{
+.toggleBG {
   position: relative;
   display: block;
   height: 30px;
   width: 50px;
-  box-shadow: inset 0px 1px 4px rgba(0,0,0,0.4), inset 0px -1px 4px rgba(255,255,255,0.4);
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.4), inset 0px -1px 4px rgba(255, 255, 255, 0.4);
   border-radius: 30px;
   background-color: #ebeeec;
 }
-.circle{
+
+.circle {
   position: absolute;
   display: inline-block;
   cursor: pointer;
@@ -111,7 +126,8 @@ body{
 
 
 }
-.circle::before{
+
+.circle::before {
   transition: 0.3s;
   position: absolute;
   content: "";
@@ -124,12 +140,14 @@ body{
   left: -5px;
   border-radius: 20px;
 }
-.toggleBG input:checked + .circle::before{
+
+.toggleBG input:checked+.circle::before {
   transform: translateX(20px);
   box-shadow: 7px 5px 0 0 #636363;
   top: -4px;
   left: -5px;
 }
+
 .moon {
   width: 50px;
   height: 50px;
@@ -140,36 +158,40 @@ body{
 }
 
 
-.darkMode{
+.darkMode {
   border: 1px solid black;
   border-radius: 25px;
   width: 40px;
   transition: 0.5;
 }
+
 /* ---------------------- */
 
 
 /* Toggle Theme V2 */
-.toggleBg input{
+.toggleBg input {
   opacity: 0;
 }
-.toggleBg{
+
+.toggleBg {
   position: relative;
   display: block;
   height: 30px;
   width: 60px;
-  box-shadow: inset 0px 1px 4px rgba(0,0,0,0.4), inset 0px -1px 4px rgba(255,255,255,0.4);
+  box-shadow: inset 0px 1px 4px rgba(0, 0, 0, 0.4), inset 0px -1px 4px rgba(255, 255, 255, 0.4);
   border-radius: 30px;
   background-color: #ebeeec;
   cursor: pointer;
   overflow: hidden;
 }
-.selector{
+
+.selector {
   display: inline-block;
   position: absolute;
   left: 0;
 }
-.switch{
+
+.switch {
   position: absolute;
   background-color: #203A43;
   border: 1px solid white;
@@ -179,42 +201,49 @@ body{
   left: 0;
   transition: 0.4s ease-out;
 }
-.Sun{
+
+.Sun {
   padding: 5px 14px 0px 4px;
   transition: 0.5s ease-out;
 }
-.Moon{
+
+.Moon {
   position: relative;
   color: #203A43;
   transition: 0.4s ease-out;
   top: 30px;
 }
-.toggleBg input:checked + .switch{
+
+.toggleBg input:checked+.switch {
   background-color: #27374D;
   left: 30px;
 }
-.toggleBg input:checked ~ .selector .Moon{
+
+.toggleBg input:checked~.selector .Moon {
   color: white;
   top: 0px;
 }
-.toggleBg input:checked ~ .selector .Sun{
+
+.toggleBg input:checked~.selector .Sun {
   transform: translateY(30px);
 }
+
 /* --------------------------- */
 
 /* Social Buttons */
-.btn-light{
+.btn-light {
   border-radius: 15px;
   border: none;
   background-color: white;
   margin: 5px 0px 0px 0px;
   width: 100%;
 }
-.btn-light:active{
+
+.btn-light:active {
   transform: scale(0.95);
 }
 
-.headerBtn{
+.headerBtn {
   display: flex;
   justify-content: flex-end;
   width: 40px;
@@ -224,64 +253,75 @@ body{
   transition: 0.4s ease-out;
   transition-delay: 0.2s;
 }
-.icon{
+
+.icon {
   transition: 0.4s ease-out;
 }
-.lightIcon{
+
+.lightIcon {
   color: white;
 }
-.darkIcon{
+
+.darkIcon {
   color: #203A43;
 }
-.headerBtn:hover{
+
+.headerBtn:hover {
   width: 100px;
   margin: 50px;
   padding: 0px;
 }
-.socialName{
+
+.socialName {
   overflow: hidden;
   transition: 0.3s ease-out;
   transition-delay: 0.2s;
 }
 
 /* -----------------------Navigation Bar----------------------- */
-.navPadding{
+.navPadding {
   padding: 0px 12px 0px 12px;
 }
-.navText{
+
+.navText {
   font-family: 'Kanit';
 }
-a{
+
+a {
   text-decoration: none;
   color: black;
 }
 
-.btnNav{
+.btnNav {
   height: 50px;
   /* border: 1px solid #dee2e6; */
   transition: 0.3s;
   background-color: white;
 }
+
 /* .btnNav:hover{
   background-color: #dee2e6;
 } */
-.active{
+.active {
   /* border-radius: 10px 10px 0px 0px; */
   background-color: #ebeeec;
 }
+
 /* ------------------------------------------ */
 
 
 
-.mainContainer{
+.mainContainer {
   min-height: 60vh;
   background-color: #ebeeec;
 }
-li{
+
+li {
   list-style-type: none;
 }
+
 /* Projects */
-.cardSize{
+.cardSize {
   margin: 0px 10px 10px 10px;
   padding-top: 10px;
   max-width: 18rem;
@@ -289,52 +329,64 @@ li{
   max-height: 400px;
   transition: 0.4s ease-in;
 }
-.cardSize .description{
+
+.cardSize .description {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   height: 78px;
   overflow: hidden;
   display: -webkit-box;
 }
-.cardSize:hover{
+
+.cardSize:hover {
   cursor: pointer;
 }
-.projectImage{
+
+.projectImage {
   height: 150px;
   width: 100%;
 }
-.projectImage:hover{
+
+.projectImage:hover {
   cursor: pointer;
 }
-.card{
+
+.card {
   box-shadow: 2px 3px 10px 0px #9f9f9f6e;
   transition: 0.3s ease-in-out
 }
-.card:hover{
+
+.card:hover {
   transform: scale(1.03);
   box-shadow: 2px 3px 10px 0px #9f9f9f6e;
 }
-.notHover{
+
+.notHover {
   opacity: 0.8;
 }
 
-.linkIcon{
+.linkIcon {
   transition: 0.3s ease-out;
 }
-.projectLink{
+
+.projectLink {
   height: 30px;
   transition: 0.4s ease-out;
 }
-.projectLink:hover .linkIcon{
+
+.projectLink:hover .linkIcon {
   transform: translate(4px, -4px);
 }
-.projectLink:hover{
+
+.projectLink:hover {
   text-decoration: underline;
 }
-.card:hover .card-title .linkIcon{
+
+.card:hover .card-title .linkIcon {
   transform: translate(4px, -4px);
 }
-.techBox{
+
+.techBox {
   min-width: 50px;
   max-height: 30px;
   border: 1px solid black;
@@ -342,16 +394,17 @@ li{
   margin: 0px 5px 5px 0px;
 }
 
-.footerLogo{
+.footerLogo {
   max-height: 150px;
 }
 
 /* About */
 
-li{
+li {
   list-style-type: circle;
 }
-.hireBtn{
+
+.hireBtn {
   background-color: white;
   width: 130px;
   display: flex;
@@ -363,27 +416,68 @@ li{
   transition: 0.2s ease-in-out;
   cursor: pointer;
 }
-.hireBtn p{
+
+.hireBtn p {
   color: white;
 }
-.hireBtn img{
+
+.hireBtn img {
   height: 17px;
 }
-.hireBtn:hover{
+
+.hireBtn:hover {
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.19) 1px 2px 8px;
 }
-.hireBtn:active img{
+
+.hireBtn:active img {
   transform: scale(0.97);
   transform-origin: center;
 }
-.certificate{
+
+.certificate {
   max-width: 100%;
 }
 
 /* --------------------Tech Stack---------------------- */
-.customSkillIcon{
+.customSkillIcon {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.cardBox{
+  padding: 0px;
+  margin: 0px;
+  transition: 0.3s ease-in;
+}
+.cardBox:hover .skillBox svg{
+  color: white;
+}
+.skillBox svg{
+  transition: 0.2s;
+}
+.itemTextBox p{
+  transition-delay: 0.3s;
+  color: #ebeeec;
+  transition: 0.2 ease-out;
+  font-size: 0.6rem;
+}
+.skillBox article{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.itemTextBox{
+  white-space: nowrap;
+  transition: 0.3s ease-out;
+  transition-delay: 0.1s;
+  width: 0px;
+  height: 15px;
+  background-color: #203A43;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.cardBox:hover .itemTextBox{
+  width: 100%;
 }
