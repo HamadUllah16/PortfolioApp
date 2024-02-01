@@ -7,17 +7,13 @@ import Footer from './components/Footer';
 import { createContext, useState, useReducer } from 'react';
 import { intitalState, reducer } from './components/reducer';
 import { motion } from 'framer-motion';
+
+export const ThemeContext = createContext({
+});
+
 const greyish = "#ebeeec"
 const white = "#ffffff"
 const green = "#203A43"
-
-export const ThemeContext = createContext({
-  // darkMode: false,
-  // textColor: green,
-  // paneColor: greyish,
-  // bgColor: white,
-  // bgImage: bgDark
-});
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -31,7 +27,7 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ darkMode, toggleDarkMode, textColor: green, paneColor: greyish, bgColor: white, state, dispatch }}>
-      <motion.section layout initial={{ opacity: 0 }} animate={{opacity: 1}} transition={{duration: 0.5, delayChildren: 0.2}}  className={`${darkMode ? "bgDark" : ""} App`}>
+      <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delayChildren: 0.2 }} className={`${darkMode ? "bgDark" : ""} App`}>
         <Header />
         <Nav />
         <MainContainer />

@@ -314,6 +314,9 @@ a {
 .mainContainer {
   min-height: 60vh;
   background-color: #ebeeec;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 li {
@@ -321,6 +324,29 @@ li {
 }
 
 /* Projects */
+.searchBox{
+  position: relative;
+  display: flex;
+  justify-content: left;
+  background-color: white;
+  border-radius: 30px;
+  padding: 0px 5px 0px 5px;
+  height: 26px;
+}
+.searchBox input{
+  box-sizing: border-box;
+  line-height: 18px;
+  border: 0;
+  outline: 0;
+  margin: 0px 0px 0px 22px;
+}
+.searchIcon{
+  position: absolute;
+  top: 6px;
+  left: 6px;
+}
+
+
 .cardSize {
   margin: 0px 10px 10px 10px;
   padding-top: 10px;
@@ -400,6 +426,11 @@ li {
 
 /* About */
 
+.upworkIcon{
+  max-width: 80px;
+  height: auto;
+}
+
 li {
   list-style-type: circle;
 }
@@ -439,6 +470,18 @@ li {
   max-width: 100%;
 }
 
+.experience{
+  border: 1px solid #ebeeec00;
+  background-color: #f1f6f300;
+  border-radius: 8px;
+  transition: 0.2s ease-in;
+}
+.experience:hover{
+  border: 1px ridge #f1f1f1;
+  background-color: #f1f6f3;
+  cursor: pointer;
+
+}
 /* --------------------Tech Stack---------------------- */
 .customSkillIcon {
   display: flex;
@@ -480,4 +523,26 @@ li {
 }
 .cardBox:hover .itemTextBox{
   width: 100%;
+}
+
+/* -----------Services--------------- */
+
+.serviceBox{
+  min-height: 60vh;
+  background-color: #ebeeec;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.service{
+  border: 1px solid #cbc7c700;
+  transition: 0.2s ease-in;
+}
+
+.service:hover{
+  background-color: #eff3f0;
+  border: 1px solid #cbc7c7;
+  border-radius: 5px;
+  transform: scale(1.01);
 }

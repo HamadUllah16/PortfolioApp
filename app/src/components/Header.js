@@ -14,14 +14,14 @@ const socialList = [
     // { name: "Freelancer", link: "https://www.freelancer.com/u/HamadUllah18", icon: faFreelancer }
 ]
 function Header() {
-    const { state } = useContext(ThemeContext);
-    const textColor = state.darkMode ? "lightText" : "darkText";
+    const { darkMode } = useContext(ThemeContext);
+    const textColor = darkMode ? "lightText" : "darkText";
     const mapSocials = socialList.map((item, index) => {
         return (
             <a key={index} href={item.link} target='_blank' rel='noreferrer' >
                 <div className={`signikaFont headerBtn m-0 d-flex align-items-center justify-content-center text-center`}>
                     <div className='icon d-flex align-items-center justify-content-center'>
-                        <FontAwesomeIcon icon={item.icon} size='xl' className={`${state.darkMode ? "lightIcon" : "darkIcon"}`} />
+                        <FontAwesomeIcon icon={item.icon} size='xl' className={`${darkMode ? "lightIcon" : "darkIcon"}`} />
                     </div>
                     <span className='socialName'>
                         <p className={`${textColor} navText px-1 m-0`}>{item.name}</p>
