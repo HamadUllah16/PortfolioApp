@@ -46,7 +46,7 @@ function TechStack() {
     <motion.section key={"tech-stack"} exit={{ opacity: 0 }} className='mainContainer px-lg-4'>
       <section className='row'>
         <section className='col-12 col-lg-6 col-md-6 col-sm-12 mt-2'>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className='navText fs-4'>Some technologies I've worked with:</motion.p>
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className='navText fs-4 mx-1'>Some technologies I've worked with:</motion.p>
           <motion.article variants={container} initial={"hidden"} animate={"visible"} className='row gap-3 m-1'>
             {techStack.map((item, index) => {
               return (
@@ -65,7 +65,7 @@ function TechStack() {
           </motion.article>
         </section>
         <section className='col-12 col-lg-6 col-md-6 col-sm-12 mt-2'>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 2 }} className='navText fs-4'>
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 2 }} className='navText fs-4 mx-1'>
             Experience:
           </motion.p>
           <motion.article initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: 2.5 }} className='experience row gap-3 m-1 p-2'>
@@ -80,7 +80,7 @@ function TechStack() {
                   Build, modify and rank websites with WordPress.
                 </p>
               </article>
-              <article className='d-flex gap-2'>
+              <article className='d-flex flex-wrap gap-2'>
                 <p className='techBox text-center px-2'>React</p>
                 <p className='techBox text-center px-2'>Bootstrap5</p>
                 <p className='techBox text-center px-2'>WordPress</p>
