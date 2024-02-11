@@ -4,11 +4,11 @@ import Projects from './Projects'
 import About from './About'
 import TechStack from './TechStack'
 import Home from './Home'
-import Experience from './Experience'
+import Experience from '../components/Experience'
 
 function MainContainer() {
   return (
-    <section className='container'>
+    <section className='container-md'>
       <section className={`shadow border-top-0 rounded-bottom `}>
         <Routes>
           <Route path='/' element={<Home />} />

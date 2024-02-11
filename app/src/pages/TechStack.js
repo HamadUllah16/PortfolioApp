@@ -4,6 +4,9 @@ import { faHtml5, faCss3, faReact, faJs, faBootstrap, faGithub, faNodeJs, faPyth
 import express from "../misc/express.png"
 import upwork from "../misc/upworkGreen.png"
 import { motion } from 'framer-motion'
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import Experience from '../components/Experience'
+
 const techStack = [
   { name: "React", icon: faReact, custom: false, color: "#5ed3f3" },
   { name: "Bootstrap5", icon: faBootstrap, custom: false, color: "#7719f7" },
@@ -20,6 +23,12 @@ const techStack = [
   { name: "GitHub", icon: faGithub, custom: false, color: "gray" },
   { name: "Git", icon: faGit, custom: false, color: "#f05639" },
   { name: "WordPress", icon: faWordpress, custom: false, color: "#28799e" }
+]
+
+const experiences = [
+  {
+    name: "Upwork", url: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", description: "Design, build and deploy web applications with the help of React, Node Express and MongoDB for clients all over the world. Build, modify and rank websites with WordPress.", technologies: ["React", "Bootstrap5", "Javascript", "WordPress"], logo: upwork, duration: "2021 - Present"
+  }
 ]
 
 function TechStack() {
@@ -45,13 +54,13 @@ function TechStack() {
   return (
     <motion.section key={"tech-stack"} exit={{ opacity: 0 }} className='mainContainer px-lg-4'>
       <section className='row'>
-        <section className='col-12 col-lg-6 col-md-6 col-sm-12 mt-2'>
+        <section className='col-12 col-lg-6 col-md-12 col-sm-12 mt-2 p-md-5 p-sm-5 p-xs-4'>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className='navText fs-4 mx-1'>Some technologies I've worked with:</motion.p>
-          <motion.article variants={container} initial={"hidden"} animate={"visible"} className='row gap-3 m-1'>
+          <motion.article variants={container} initial={"hidden"} animate={"visible"} className='row gap-2 m-1'>
             {techStack.map((item, index) => {
               return (
-                <motion.div variants={cards} whileHover={{ backgroundColor: item.color }} className='cardBox col-3 col-sm-3 col-lg-2 col-md-3'>
-                  <article className='skillBox ' key={index}>
+                <motion.div variants={cards} whileHover={{ backgroundColor: item.color }} className='cardBox col-2 ' key={index}>
+                  <article className='skillBox '>
                     <article className='p-1'>
                       {item.custom ? <img src={item.icon} alt='skill' style={{ maxWidth: "60px" }} /> : <FontAwesomeIcon icon={item.icon} size="4x" />}
                     </article>
@@ -64,30 +73,17 @@ function TechStack() {
             })}
           </motion.article>
         </section>
-        <section className='col-12 col-lg-6 col-md-6 col-sm-12 mt-2'>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 2 }} className='navText fs-4 mx-1'>
+
+        <section className='col-12 col-lg-6 col-md-12 col-sm-12 mt-2 p-md-5 p-sm-5'>
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 2 }} className='navText fs-4 '>
             Experience:
           </motion.p>
-          <motion.article initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: 2.5 }} className='experience row gap-3 m-1 p-2'>
-            <article className='col-3'>
-              <p className='ralewayFont fs-6 p-0'>2021 - Present</p>
-            </article>
-            <article className='col-8'>
-              <img src={upwork} className='upworkIcon mb-1' alt='company' />
-              <article className=''>
-                <p className='hammerFont'>
-                  Design, build and deploy web applications with the help of React, Node Express and MongoDB for clients all over the world. <br></br>
-                  Build, modify and rank websites with WordPress.
-                </p>
-              </article>
-              <article className='d-flex flex-wrap gap-2'>
-                <p className='techBox text-center px-2'>React</p>
-                <p className='techBox text-center px-2'>Bootstrap5</p>
-                <p className='techBox text-center px-2'>WordPress</p>
-                <p className='techBox text-center px-2'>Javascript</p>
-              </article>
-            </article>
-          </motion.article>
+          {experiences.map((item, index) => {
+            return (
+              <Experience item={item} index={index} linkIcon={faArrowUpRightFromSquare} />
+            )
+          })}
+
         </section>
       </section>
     </motion.section>

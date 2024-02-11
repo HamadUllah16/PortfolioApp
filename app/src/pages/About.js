@@ -7,9 +7,9 @@ import { motion } from "framer-motion";
 
 function About() {
   return (
-    <motion.section key={"about"} initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className='mainContainer gap-2'>
-      <section className="row px-5">
-        <article className='col-12 col-lg-6 col-md-6 col-sm-12'>
+    <section key={"about"} initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className='mainContainer gap-2'>
+      <motion.section key={"about"} initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="row p-4">
+        <article className='col-12 col-lg-6 col-md-12 col-sm-12'>
           <h4 className='navText fs-3'>Hi I'm Hamad</h4>
           <p className='fs-5 ralewayFont mb-1'>A Software Engineer who likes to build amazing web applications using latest technologies and frameworks. I obsess over systematic and conventional way of building web applications to:</p>
           <ul className="mb-2">
@@ -81,8 +81,8 @@ function About() {
           </div>
 
         </article>
-      </section>
-    </motion.section>
+      </motion.section>
+    </section>
   )
 }
 

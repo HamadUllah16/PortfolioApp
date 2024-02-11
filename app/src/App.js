@@ -2,7 +2,7 @@ import './App.css';
 import "./index.css";
 import Header from './components/Header';
 import Nav from './components/Nav';
-import MainContainer from './components/MainContainer';
+import MainContainer from './pages/MainContainer';
 import Footer from './components/Footer';
 import { createContext, useState, useReducer } from 'react';
 import { intitalState, reducer } from './components/reducer';
