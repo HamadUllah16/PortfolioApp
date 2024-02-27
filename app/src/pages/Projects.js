@@ -6,6 +6,8 @@ import kensTree from "../misc/Ken's Discount Tree.jpg"
 import demolition from "../misc/demolition.jpg"
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { motion } from "framer-motion"
+import { useContext } from 'react';
+import { ThemeContext } from '../App';
 const projects = [
   { name: "Little Lemon Restaurant", description: "Little Lemon a Mediterranean restaurant, focused on traditional receipes served with modern twist.", image: littleLemon, gif: littleLemonGif, github: "https://github.com/HamadUllah16/LittleLemon-Reservations", live: "https://littlelemonchicago.vercel.app", technologies: ["React", "Bootstrap5", "CSS", "UI/UX"] },
 
@@ -16,6 +18,9 @@ const projects = [
 
 
 function Projects() {
+  const { state } = useContext(ThemeContext);
+  const theme = state.darkMode ? "lightText" : "darkText"
+  const boxColor = state.darkMode ? "bgDarkBox" : "bg-light";
   const container = {
     hidden: { opacity: 1, scale: 0 },
     visible: {
@@ -43,16 +48,14 @@ function Projects() {
           {projects.map((item, index) => {
             return (
               <motion.a variants={cards} whileHover={{ scale: 1.05 }}
-
-                href={item.live} key={index} target='_blank' rel='noreferrer' className="card cardSize p-0 m-0 col-12 col-md-12 col-lg-6">
+                href={item.live} key={index} target='_blank' rel='noreferrer' style={{ border: `2px solid ${state.darkMode ? "#818181" : "white"}` }} className="card cardSize p-0 m-0 col-12 col-md-12 col-lg-6">
                 <img src={item.image} alt='project-cover' className="card-img-top projectImage"
                 />
-                <div className="card-body">
-
-                  <div className="card-title navText d-flex justify-content-between align-items-center gap-2"><p className='fs-6 p-0 m-0'>{item.name}</p>
+                <div className={`${boxColor} card-body`} style={{ borderRadius: 3 }}>
+                  <div className={`${theme} card-title navText d-flex justify-content-between align-items-center gap-2`}><p className='fs-6 p-0 m-0'>{item.name}</p>
                     <div className='d-flex align-items-center gap-2'>
                       {item.github ?
-                        <a href={item.github} className='signikaFont m-0'><FontAwesomeIcon icon={faGithub} /></a>
+                        <a href={item.github} className={`${theme} signikaFont m-0`}><FontAwesomeIcon icon={faGithub} /></a>
                         :
                         ""
                       }
@@ -63,11 +66,11 @@ function Projects() {
                       }
                     </div>
                   </div>
-                  <p className="card-text ralewayFont description">{item.description}</p>
+                  <p className={`${theme} card-text ralewayFont description`}>{item.description}</p>
                   <article className='d-flex flex-wrap align-items-center'>
                     {item.technologies.map((item, index) => {
                       return (
-                        <div key={index} className='techBox'><p className='px-2 text-center m-0'>{item}</p></div>
+                        <div key={index} className={`${theme} ${state.darkMode ? "techBoxBlack" : "techBox"}`}><p className='px-2 text-center m-0'>{item}</p></div>
                       )
                     })}
                   </article>

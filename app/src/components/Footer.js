@@ -6,9 +6,10 @@ const date = new Date();
 function Footer() {
     const { state } = useContext(ThemeContext);
     const theme = state.darkMode ? "lightText" : "darkText"
+    const boxColor = state.darkMode ? "bgDarkBox" : "bg-light border";
     return (
-        <section className='container'>
-            <section className='row m-0'>
+        <section className='container mt-3'>
+            <section className={`row m-0 rounded-4 ${boxColor}`}>
                 <article className='col-12 col-lg-3 col-md-3 d-flex align-items-center justify-content-center logoBox'>
                     <img className='img img-fluid footerLogo' src={state.darkMode ? logoDark : logo} alt='logo' />
                 </article>
@@ -35,9 +36,9 @@ function Footer() {
                         <li className={`${theme} ralewayFont ralewayFont`}>Linkedin</li>
                     </ul>
                 </article>
-                <hr className={`${theme} ralewayFont`}></hr>
-                <p className={`${theme} ralewayFont text-center`}>All rights reserved - Hamad {date.getFullYear()} </p>
             </section>
+            <hr className={`${theme} ralewayFont`}></hr>
+            <p className={`${theme} ralewayFont text-center m-0`}>All rights reserved - Hamad {date.getFullYear()} </p>
         </section>
     )
 }

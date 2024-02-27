@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: #ebeeec;
 }
 
 .App {
@@ -18,7 +19,12 @@ body {
 }
 
 .bgDark {
-  background-color: #203A43;
+  background-color: #121212;
+}
+
+.bgDarkBox{
+  transition: 0.3s;
+  background-color: #292929;
 }
 
 .bgLight {
@@ -26,7 +32,8 @@ body {
 }
 
 .lightText {
-  color: white;
+  color: #e2e2e2;
+  /* color: #818181; */
 }
 
 .darkText {
@@ -278,6 +285,10 @@ body {
   transition: 0.3s ease-out;
   transition-delay: 0.2s;
 }
+.toggleSwitch{
+  position: absolute;
+  right: 140px;
+}
 
 /* -----------------------Navigation Bar----------------------- */
 .navPadding {
@@ -295,18 +306,13 @@ a {
 
 .btnNav {
   height: 50px;
-  /* border: 1px solid #dee2e6; */
-  transition: 0.3s;
-  background-color: white;
+  border-bottom: 2px solid #203a4300;
+  transition: 0.3s ease-in-out;
+}
+.active{
+  border-bottom: 2px solid #203A43;
 }
 
-/* .btnNav:hover{
-  background-color: #dee2e6;
-} */
-.active {
-  /* border-radius: 10px 10px 0px 0px; */
-  background-color: #ebeeec;
-}
 
 /* ------------------------------------------ */
 
@@ -314,7 +320,6 @@ a {
 
 .mainContainer {
   min-height: 60vh;
-  background-color: #ebeeec;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -379,13 +384,13 @@ li {
 }
 
 .card {
-  box-shadow: 2px 3px 10px 0px #9f9f9f6e;
+  /* box-shadow: 2px 3px 10px 0px #9f9f9f6e; */
   transition: 0.3s ease-in-out
 }
 
 .card:hover {
   transform: scale(1.03);
-  box-shadow: 2px 3px 10px 0px #9f9f9f6e;
+  /* box-shadow: 2px 3px 10px 0px #9f9f9f6e; */
 }
 
 .notHover {
@@ -416,6 +421,13 @@ li {
   border-radius: 50px;
   margin: 0px 5px 5px 0px;
 }
+.techBoxBlack{
+  min-width: 50px;
+  max-height: 30px;
+  border: 1px solid white;
+  border-radius: 50px;
+  margin: 0px 5px 5px 0px;
+}
 
 .footerLogo {
   max-height: 150px;
@@ -433,7 +445,7 @@ li {
 }
 
 .hireBtn {
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 130px;
   display: flex;
   justify-content: center;
@@ -443,6 +455,7 @@ li {
   border-radius: 10px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
+  border: 2px solid #203A43;
 }
 
 .hireBtn p {

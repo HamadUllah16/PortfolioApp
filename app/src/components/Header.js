@@ -16,6 +16,7 @@ const socialList = [
 function Header() {
     const { darkMode } = useContext(ThemeContext);
     const textColor = darkMode ? "lightText" : "darkText";
+    const boxColor = darkMode ? "bgDarkBox" : "bg-light border";
 
     const mapSocials = socialList.map((item, index) => {
         return (
@@ -32,9 +33,9 @@ function Header() {
         )
     })
     return (
-        <header className='container rounded-bottom p-2'>
-            <div className='container-fluid pt-2'>
-                <section className='row'>
+        <header className='container p-2' >
+            <div className={`container-fluid p-2 px-5 ${boxColor} rounded-4 `}>
+                <section className='row p-2'>
                     <div className='col-12 col-lg-6 col-md-6 p-0'>
                         <div className='row'>
                             <div className='col d-flex align-items-center headerPfp'>
