@@ -48,10 +48,10 @@ function Projects() {
           {projects.map((item, index) => {
             return (
               <motion.a variants={cards} whileHover={{ scale: 1.05 }}
-                href={item.live} key={index} target='_blank' rel='noreferrer' style={{ border: `2px solid ${state.darkMode ? "#818181" : "white"}` }} className="card cardSize p-0 m-0 col-12 col-md-12 col-lg-6">
+                href={item.live} key={index} target='_blank' rel='noreferrer' style={state.darkMode ? { border: "1px solid #e2e2e2", overflow: "hidden" } : { overflow: "hidden" }} className="card cardSize p-0 m-0 col-12 col-md-12 col-lg-6">
                 <img src={item.image} alt='project-cover' className="card-img-top projectImage"
                 />
-                <div className={`${boxColor} card-body`} style={{ borderRadius: 3 }}>
+                <div className={`${boxColor} card-body`} >
                   <div className={`${theme} card-title navText d-flex justify-content-between align-items-center gap-2`}><p className='fs-6 p-0 m-0'>{item.name}</p>
                     <div className='d-flex align-items-center gap-2'>
                       {item.github ?
@@ -80,7 +80,7 @@ function Projects() {
           })}
 
         </motion.section>
-      </section>
+      </section >
     </>
   )
 }

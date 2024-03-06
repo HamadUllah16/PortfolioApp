@@ -16,7 +16,7 @@ function Nav() {
     const { state } = useContext(ThemeContext);
 
     const theme = state.darkMode ? "lightText" : "darkText"
-    const boxColor = state.darkMode ? "bgDarkBox" : "bg-light border-top border-left border-right";
+    const boxColor = state.darkMode ? `bgDarkBox border-top border-left border-right border-dark` : `bg-light border-top border-left border-right`;
 
     return (
         <>
@@ -29,7 +29,7 @@ function Nav() {
                         <section className='mx-0 row container-fluid p-0'>
                             {navLinks.map((item, index) => {
                                 return (
-                                    <NavLink key={index} to={item.link} className='btnNav col-12 col-sm-12 col-lg col-md d-flex justify-content-center align-items-center '>
+                                    <NavLink key={index} to={item.link} style={{ color: state.darkMode ? "#e2e2e2" : "" }} className='btnNav col-12 col-sm-12 col-lg col-md d-flex justify-content-center align-items-center '>
                                         <p className={`${theme} mb-0 hammerFont text-center`}>{item.name}</p>
                                     </NavLink>
                                 )

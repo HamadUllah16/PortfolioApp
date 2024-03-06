@@ -310,7 +310,7 @@ a {
   transition: 0.3s ease-in-out;
 }
 .active{
-  border-bottom: 2px solid #203A43;
+  border-bottom: 2px solid currentColor;
 }
 
 
@@ -357,8 +357,6 @@ li {
   margin: 0px 10px 10px 10px;
   padding-top: 10px;
   max-width: 18rem;
-  height: 400px;
-  max-height: 400px;
   transition: 0.4s ease-in;
 }
 
@@ -455,7 +453,8 @@ li {
   border-radius: 10px;
   transition: 0.2s ease-in-out;
   cursor: pointer;
-  border: 2px solid #203A43;
+  border: 1px solid #e2e2e2;
+  box-shadow: rgba(0, 0, 0, 0.19) 1px 2px 4px;
 }
 
 .hireBtn p {
@@ -468,7 +467,6 @@ li {
 
 .hireBtn:hover {
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.19) 1px 2px 8px;
 }
 
 .hireBtn:active img {
@@ -481,16 +479,12 @@ li {
 }
 
 .experience{
-  border: 1px solid #ebeeec00;
-  background-color: #f1f6f300;
   border-radius: 8px;
-  transition: 0.2s ease-in;
+  transition: 0.3s;
+  transition-delay: 0.1s;
 }
 .experience:hover{
-  border: 1px ridge #f1f1f1;
-  background-color: #f1f6f3;
   cursor: pointer;
-
 }
 /* --------------------Tech Stack---------------------- */
 .customSkillIcon {
