@@ -13,7 +13,7 @@ function Switch() {
         <span className='circle'/>
       </label>
     </div> */}
-      <div>
+      <div className='d-flex justify-content-end p-0 pt-2'>
         <label className="toggleBg">
           <input type="checkbox" onClick={toggleDarkMode} />
           <span className="switch">

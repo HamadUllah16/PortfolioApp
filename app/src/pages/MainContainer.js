@@ -13,8 +13,8 @@ function MainContainer() {
   const theme = darkMode ? "bgDarkBox" : "bg-light border-right border-left border-bottom"
 
   return (
-    <section className='container-md'>
-      <section className={`${theme} rounded-bottom-4`}>
+    <section className='container-md p-0'>
+      <section className={`${theme} rounded-4 `}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />

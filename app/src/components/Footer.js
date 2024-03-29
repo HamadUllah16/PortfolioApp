@@ -8,7 +8,7 @@ function Footer() {
     const theme = state.darkMode ? "lightText" : "darkText"
     const boxColor = state.darkMode ? "bgDarkBox" : "bg-light border";
     return (
-        <section className='container mt-3'>
+        <section className='footerMain container-md'>
             <section className={`row m-0 rounded-4 ${boxColor}`}>
                 <article className='col-12 col-lg-3 col-md-3 d-flex align-items-center justify-content-center logoBox'>
                     <img className='img img-fluid footerLogo' src={state.darkMode ? logoDark : logo} alt='logo' />
@@ -38,7 +38,7 @@ function Footer() {
                 </article>
             </section>
             <hr className={`${theme} ralewayFont`}></hr>
-            <p className={`${theme} ralewayFont text-center m-0`}>All rights reserved - Hamad {date.getFullYear()} </p>
+            <p className={`${theme} ralewayFont text-center m-0 p-0`}>All rights reserved - Hamad {date.getFullYear()} </p>
         </section>
     )
 }

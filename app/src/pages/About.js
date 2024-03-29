@@ -63,22 +63,18 @@ function About() {
                 <a className="projectLink d-flex gap-1" target="_blank" rel="noreferrer" href="https://www.coursera.org/programs/dlsei-phase-2b-iigii/professional-certificates/meta-front-end-developer"><span className={`${theme} ralewayFont fs-6`}>Meta Front-End Specialization</span><FontAwesomeIcon className={`${theme} linkIcon`} size="xs" icon={faArrowUpRightFromSquare} /></a>
               </div>
               <div className='col'>
-                <div className='row'>
-                  <div className='col'>
-                    <p className={`${theme} m-0`}>Coursera</p>
-                    <p className={`${theme}`}>2023</p>
+                <div className='d-flex gap-2'>
+                  <p className={`${theme} m-0`}>Coursera</p>
+                  <p className={`${theme}`}>2023</p>
+                  <div style={{ maxWidth: "100px" }}>
+                    <a href="https://www.coursera.org/account/accomplishments/professional-cert/9DHKPLDZT64B" target="_blank" rel="noreferrer">
+                      <img src={frontEndCertificate} className="certificate" alt='certificate' /><br></br>
+                    </a>
+                    <a href='https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url' target='_blank' rel="noreferrer">
+                      <p className='  btn-light text-center ralewayFont'>Verify</p>
+                    </a>
                   </div>
-                  <div className='col justify-content-center'>
-                    <div style={{ maxWidth: "100px" }}>
-                      <a href="https://www.coursera.org/account/accomplishments/professional-cert/9DHKPLDZT64B" target="_blank" rel="noreferrer">
-                        <img src={frontEndCertificate} className="certificate" alt='certificate' /><br></br>
-                      </a>
-                      <a href='https://www.credly.com/badges/b619179c-b71c-4909-a414-f29ac0f34bc7/public_url' target='_blank' rel="noreferrer">
-                        <p className='  btn-light text-center ralewayFont'>Verify</p>
-                      </a>
-                    </div>
 
-                  </div>
                 </div>
               </div>
             </div>

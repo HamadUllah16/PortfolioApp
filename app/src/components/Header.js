@@ -1,15 +1,15 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Switch from './Switch'
 import { useContext } from 'react'
 import { ThemeContext } from '../App'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faArrowCircleDown, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+
 const pfp = '/pfp.jpg'
 
 const socialList = [
     { name: "GitHub", link: "https://github.com/HamadUllah16/", icon: faGithub },
     { name: "Linkedin", link: "https://www.linkedin.com/in/hamadullah16/", icon: faLinkedin },
-    { name: "Email", link: "mailto:hamadullah16@gmail.com", icon: faEnvelope }
+    { name: "Email", link: "mailto:hamadullah16@gmail.com", icon: faEnvelope },
     // { name: "Upwork", link: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", icon: faUpwork },
     // { name: "Freelancer", link: "https://www.freelancer.com/u/HamadUllah18", icon: faFreelancer }
 ]
@@ -33,31 +33,23 @@ function Header() {
         )
     })
     return (
-        <header className='container py-2' >
-            <div className={`container-fluid p-2 px-5 ${boxColor} rounded-4 `}>
-                <section className='row p-2'>
-                    <div className='col-12 col-lg-6 col-md-6 p-0'>
-                        <div className='row'>
-                            <div className='col d-flex align-items-center headerPfp'>
-                                <img className='img img-fluid' src={pfp} alt='' />
-                            </div>
-                            <div className='col text-start mt-4'>
-                                <p className={`${textColor} headerName mb-0`}>Hamad Ullah</p>
-                                <p className={`${textColor} navText`}>Software Engineer</p>
-                            </div>
-                        </div>
+        <header className='d-flex align-items-end container-md p-0' style={{ height: "auto" }} >
+            <div className={`container-fluid p-2 ${boxColor} rounded-4 `}>
+                <section className='d-flex flex-column justify-content-center align-items-center'>
+                    <div className='headerPfp'>
+                        <img className='img img-fluid shadow' src={pfp} alt='' />
                     </div>
-
-                    <div className='col-12 col-lg-6 col-md-6 p-0'>
-                        <div className=''>
-                            <div className='mb-1 mt-3 p-0 d-flex justify-content-end'>
-                                <Switch />
-                            </div>
+                    <div className=' d-flex flex-column justify-content-around align-items-center' style={{ width: "100%" }}>
+                        <div className='text-center mt-4'>
+                            <p className={`${textColor} headerName mb-0`}>Hamad Ullah</p>
+                            <p className={`${textColor} navText `}>Software Engineer</p>
                         </div>
-                        <div className='d-flex flex-wrap justify-content-end pt-1'>
+                        <div className='d-flex flex-wrap justify-content-center pt-1'>
                             {mapSocials}
                         </div>
                     </div>
+                    <a target='_blank' rel='noreferrer' href={"https://drive.google.com/file/d/11DT1DB8Gt6gICzkeKliw5NdEY1Zj64DY/view?usp=sharing"} className='hireBtn d-flex justify-content-center align-items-center m-2'><FontAwesomeIcon icon={faArrowCircleDown} style={{ color: textColor }} size='lg' /> Resume</a>
+
                 </section>
             </div>
         </header>

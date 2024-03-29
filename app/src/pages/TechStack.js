@@ -60,7 +60,7 @@ function TechStack() {
   return (
     <motion.section key={"tech-stack"} exit={{ opacity: 0 }} className='mainContainer px-lg-4'>
       <section className='row'>
-        <section className='col-12 col-lg-6 col-md-12 col-sm-12 mt-2 p-md-5 p-sm-5 p-xs-4'>
+        <section className='col-12 col-lg-6 col-md-12 col-sm-12 my-3'>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className={`${theme} navText fs-4 mx-1`}>Some technologies I've worked with:</motion.p>
           <motion.article variants={container} initial={"hidden"} animate={"visible"} className='row gap-2 m-1'>
             {techStack.map((item, index) => {
@@ -80,7 +80,7 @@ function TechStack() {
           </motion.article>
         </section>
 
-        <section className='col-12 col-lg-6 col-md-12 col-sm-12 mt-2 p-md-5 p-sm-5'>
+        <section className='col-12 col-lg-6 col-md-12 col-sm-12 my-3'>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 2 }} className={`${theme} navText fs-4`}>
             Experience:
           </motion.p>

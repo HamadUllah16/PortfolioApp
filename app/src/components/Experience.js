@@ -11,7 +11,7 @@ function Experience({ item, index, linkIcon }) {
     <motion.a href={item.url} key={index} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.3, delay: 2.5 }} target='_blank' className='row'>
       <motion.section whileHover={{ backgroundColor: state.darkMode ? "#121212" : "white" }} className='p-3 projectLink experience'>
         <section className='row'>
-          <section className='d-flex gap-2 mx-1 py-1'>
+          <section className='col d-flex gap-2 mx-1 py-1'>
             <article className='col-3'>
               <p className={`${theme} ralewayFont fs-6 p-0`}>{item.duration}</p>
             </article>
@@ -24,7 +24,7 @@ function Experience({ item, index, linkIcon }) {
           </section>
         </section>
         <section className='row'>
-          <article className=''>
+          <article className='col d-flex flex-wrap'>
             <p className={`${theme} hammerFont`}>
               {item.description}
             </p>

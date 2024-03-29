@@ -92,15 +92,25 @@ body {
 }
 
 /* --------------------------Header CSS---------------- */
+header{
+  height: 100%;
+}
+header > div{
+  height: 90%;
+}
 
 .headerPfp {
-  max-width: 120px;
-  min-width: 70px;
+  /* position: relative; */
+  display: flex;
+  justify-content: center;
 }
 
-.headerPfp img {
-  border-radius: 80px;
-}
+  .headerPfp > img{
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 100%;
+  }
 
 .headerName {
   font-family: 'Julius Sans One', sans-serif;
@@ -291,8 +301,9 @@ body {
 }
 
 /* -----------------------Navigation Bar----------------------- */
-.navPadding {
+.navMain {
   padding: 0px 12px 0px 12px;
+  height: 100%;
 }
 
 .navText {
@@ -306,11 +317,52 @@ a {
 
 .btnNav {
   height: 50px;
-  border-bottom: 2px solid #203a4300;
+  width: 50px;
   transition: 0.3s ease-in-out;
+  border-radius: 100px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
 }
+
+@media screen and (max-width: 767px) {
+  .navBtnBox{
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+    padding: 10px;
+    background-color: currentColor;
+    z-index: 1000;
+    transform-origin: center;
+  }
+  .footerMain{
+    padding-bottom: 80px !important;
+  }
+  .mainContainer{
+    min-height: 90vh;
+    width: auto;
+  }
+
+  .btnNav{
+    height: 40px;
+    width: 40px;
+  }
+  .navBtnBox{
+    min-height: 80px;
+  }
+  .active{
+    height: 50px;
+    width: 50px;
+    transform-origin: center;
+  }
+}
+
 .active{
-  border-bottom: 2px solid currentColor;
+  border:2px solid currentColor;
 }
 
 
@@ -319,10 +371,12 @@ a {
 
 
 .mainContainer {
+  height: auto;
   min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: auto;
 }
 
 li {
@@ -330,6 +384,13 @@ li {
 }
 
 /* Projects */
+.projectRow{
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y:hidden;
+}
+
 .searchBox{
   position: relative;
   display: flex;
@@ -375,6 +436,7 @@ li {
 .projectImage {
   height: 150px;
   width: 100%;
+  object-fit: contain;
 }
 
 .projectImage:hover {
@@ -430,6 +492,9 @@ li {
 .footerLogo {
   max-height: 150px;
 }
+.footerMain{
+  padding: 0px;
+}
 
 /* About */
 
@@ -444,7 +509,7 @@ li {
 
 .hireBtn {
   background-color: rgb(255, 255, 255);
-  width: 130px;
+  min-width: 100px;
   display: flex;
   justify-content: center;
   align-items: center;

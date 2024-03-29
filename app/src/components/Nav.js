@@ -3,40 +3,38 @@ import { motion } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
 import { ThemeContext } from '../App'
 import { useContext } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCode, faFile, faHouse, faBriefcase } from '@fortawesome/free-solid-svg-icons'
 
 const navLinks = [
-    { name: "Home", link: "/" },
-    { name: "Projects", link: "/projects" },
-    { name: "About Me", link: "/about" },
-    { name: "Tech Stack", link: "/techstack" },
+    { name: "Home", icon: faHouse, link: "/" },
+    { name: "Projects", icon: faBriefcase, link: "/projects" },
+    { name: "About", icon: faFile, link: "/about" },
+    { name: "Technology Stack", icon: faCode, link: "/techstack" },
     // { name: "Experience", link: "/experience" }
 ]
 
 function Nav() {
     const { state } = useContext(ThemeContext);
 
-    const theme = state.darkMode ? "lightText" : "darkText"
-    const boxColor = state.darkMode ? `bgDarkBox border-top border-left border-right border-dark` : `bg-light border-top border-left border-right`;
+    const theme = state.darkMode ? "lightText" : "darkText";
+    const boxColor = state.darkMode ? `bgDarkBox` : `bg-light`;
 
     return (
         <>
-            <motion.div className="container navbar navbar-expand-lg navPadding mt-2 ">
-                <div className="container-fluid p-0">
-                    <button className="navbar-toggler bgLight mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className={` navbar-toggler-icon `}></span>
-                    </button>
-                    <div className={`collapse ${boxColor} rounded-top-4 navbar-collapse`} id="navbarNav">
-                        <section className='mx-0 row container-fluid p-0'>
-                            {navLinks.map((item, index) => {
-                                return (
-                                    <NavLink key={index} to={item.link} style={{ color: state.darkMode ? "#e2e2e2" : "" }} className='btnNav col-12 col-sm-12 col-lg col-md d-flex justify-content-center align-items-center '>
-                                        <p className={`${theme} mb-0 hammerFont text-center`}>{item.name}</p>
-                                    </NavLink>
-                                )
-                            })}
-                        </section>
-                    </div>
-                </div>
+            <motion.div className="d-flex flex-column container navMain p-0 ">
+                <section className='container-fluid p-0 d-flex align-items-center justify-content-center' style={{ height: "100%" }}>
+                    <article className='navBtnBox d-flex flex-row flex-md-column flex-lg-column flex-sm-row justify-content-around align-items-center gap-3'>
+                        {navLinks.map((item, index) => {
+                            return (
+                                <NavLink key={index} to={item.link} className={`${boxColor} btnNav ${theme}`}>
+                                    <FontAwesomeIcon icon={item.icon} className={`${theme}`} />
+                                    {/* <p className={`${theme} mb-0 hammerFont text-center`}>{item.name}</p> */}
+                                </NavLink>
+                            )
+                        })}
+                    </article>
+                </section>
             </motion.div>
         </>
     )
