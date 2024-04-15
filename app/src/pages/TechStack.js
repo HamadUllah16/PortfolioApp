@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHtml5, faCss3, faReact, faJs, faBootstrap, faGithub, faNodeJs, faPython, faJava, faFigma, faAndroid, faGit, faWordpress } from '@fortawesome/free-brands-svg-icons'
-import express from "../misc/express.png"
-import upwork from "../misc/upworkGreen.png"
 import { motion } from 'framer-motion'
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Experience from '../components/Experience'
 import { ThemeContext } from '../App'
 
+const express = "/express.png"
+const upwork = "/upworkGreen.png"
 
 const techStack = [
   { name: "React", icon: faReact, custom: false, color: "#5ed3f3" },
@@ -56,16 +56,15 @@ function TechStack() {
   };
 
   const { state } = useContext(ThemeContext);
-  const theme = state.darkMode ? "lightText" : "darkText"
   return (
     <motion.section key={"tech-stack"} exit={{ opacity: 0 }} className='mainContainer px-lg-4'>
       <section className='row'>
         <section className='col-12 col-lg-6 col-md-12 col-sm-12 my-3'>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className={`${theme} navText fs-4 mx-1`}>Some technologies I've worked with:</motion.p>
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className={`${state.textColor} navText fs-4 mx-1`}>Some technologies I've worked with:</motion.p>
           <motion.article variants={container} initial={"hidden"} animate={"visible"} className='row gap-2 m-1'>
             {techStack.map((item, index) => {
               return (
-                <motion.div variants={cards} whileHover={{ backgroundColor: item.color }} className={`${theme} cardBox col-2`} key={index}>
+                <motion.div variants={cards} whileHover={{ backgroundColor: item.color }} className={`${state.textColor} cardBox col-2`} key={index}>
                   <article className='skillBox '>
                     <article className='p-1'>
                       {item.custom ? <img src={item.icon} alt='skill' style={{ maxWidth: "60px" }} /> : <FontAwesomeIcon icon={item.icon} size="4x" />}
@@ -81,7 +80,7 @@ function TechStack() {
         </section>
 
         <section className='col-12 col-lg-6 col-md-12 col-sm-12 my-3'>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 2 }} className={`${theme} navText fs-4`}>
+          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 2 }} className={`${state.textColor} navText fs-4`}>
             Experience:
           </motion.p>
           {experiences.map((item, index) => {

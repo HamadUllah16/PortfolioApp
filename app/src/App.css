@@ -183,6 +183,10 @@ header > div{
   transition: 0.5;
 }
 
+.hireBtn:hover .downloadIcon{
+  color: green;
+}
+
 /* ---------------------- */
 
 
@@ -318,7 +322,7 @@ a {
 .btnNav {
   height: 50px;
   width: 50px;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease;
   border-radius: 100px;
   border: 2px solid rgba(255, 255, 255, 0);
   display: flex;
@@ -333,9 +337,8 @@ a {
     position: fixed;
     bottom: 0px;
     width: 100%;
-    border-radius: 10px 10px 0px 0px;
     padding: 10px;
-    background-color: currentColor;
+    background-color: white;
     z-index: 1000;
     transform-origin: center;
   }
@@ -355,9 +358,7 @@ a {
     min-height: 80px;
   }
   .active{
-    height: 50px;
-    width: 50px;
-    transform-origin: center;
+    transform:scale(1.5);
   }
 }
 
@@ -386,9 +387,9 @@ li {
 /* Projects */
 .projectRow{
   display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overflow-y:hidden;
+  width: 100%;
+  /* overflow-x: auto;
+  overflow-y:hidden; */
 }
 
 .searchBox{
@@ -418,7 +419,7 @@ li {
   margin: 0px 10px 10px 10px;
   padding-top: 10px;
   max-width: 18rem;
-  transition: 0.4s ease-in;
+  transition: 0.2s ease;
 }
 
 .cardSize .description {
@@ -443,15 +444,6 @@ li {
   cursor: pointer;
 }
 
-.card {
-  /* box-shadow: 2px 3px 10px 0px #9f9f9f6e; */
-  transition: 0.3s ease-in-out
-}
-
-.card:hover {
-  transform: scale(1.03);
-  /* box-shadow: 2px 3px 10px 0px #9f9f9f6e; */
-}
 
 .notHover {
   opacity: 0.8;
@@ -470,7 +462,7 @@ li {
 }
 
 
-.card:hover .card-title .linkIcon {
+.cardSize:hover .card-title .linkIcon {
   transform: translate(4px, -4px);
 }
 
@@ -541,6 +533,10 @@ li {
 
 .certificate {
   max-width: 100%;
+}
+.verify:hover p{
+  background: #203A43;
+  color: #e2e2e2;
 }
 
 .experience{

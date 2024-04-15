@@ -1,44 +1,41 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from '../App';
-const logo = "/logoMain.png"
-const logoDark = "/logoMainDark.png"
 const date = new Date();
 function Footer() {
     const { state } = useContext(ThemeContext);
-    const theme = state.darkMode ? "lightText" : "darkText"
-    const boxColor = state.darkMode ? "bgDarkBox" : "bg-light border";
+
     return (
         <section className='footerMain container-md'>
-            <section className={`row m-0 rounded-4 ${boxColor}`}>
-                <article className='col-12 col-lg-3 col-md-3 d-flex align-items-center justify-content-center logoBox'>
+            <section className={`row gap-3 m-0 `}>
+                {/* <article className={`rounded-4 ${boxColor} col-3 col-lg-2 col-md-3 d-flex align-items-center justify-content-center logoBox`}>
                     <img className='img img-fluid footerLogo' src={state.darkMode ? logoDark : logo} alt='logo' />
-                </article>
-                <article className='col-4 col-lg-3 col-md-3 mt-3'>
+                </article> */}
+                <article className={`rounded-4 ${state.bgColor} ${state.border} col pt-3`}>
                     <ul>
-                        <p className={` ${theme} hammerFont`}>Projects</p>
-                        <li className={`${theme} ralewayFont`}>Little Lemon</li>
-                        <li className={`${theme} ralewayFont`}>Yelp Camps</li>
+                        <p className={`${state.textColor} hammerFont`}>Projects</p>
+                        <li className={`${state.textColor} ralewayFont`}>Little Lemon</li>
+                        <li className={`${state.textColor} ralewayFont`}>Yelp Camps</li>
                     </ul>
                 </article>
-                <article className='col-4 col-lg-3 col-md-3 mt-3'>
+                <article className={`rounded-4 ${state.bgColor} ${state.border} col pt-3`}>
                     <ul>
-                        <p className={`${theme} hammerFont`}>Services</p>
-                        <li className={`${theme} ralewayFont`}>SPA Development</li>
-                        <li className={`${theme} ralewayFont`}>Web App Development</li>
-                        <li className={`${theme} ralewayFont`}>UI/UX</li>
+                        <p className={`${state.textColor} hammerFont`}>Services</p>
+                        <li className={`${state.textColor} ralewayFont`}>SPA Development</li>
+                        <li className={`${state.textColor} ralewayFont`}>Web App Development</li>
+                        <li className={`${state.textColor} ralewayFont`}>UI/UX</li>
                     </ul>
                 </article>
-                <article className='col-4 col-lg-3 col-md-3 mt-3'>
+                <article className={`rounded-4 ${state.bgColor} ${state.border} col pt-3`}>
                     <ul>
-                        <p className={`${theme} hammerFont`}>Hire</p>
-                        <li className={`${theme} ralewayFont ralewayFont`}>Upwork</li>
-                        <li className={`${theme} ralewayFont ralewayFont`}>Freelancer</li>
-                        <li className={`${theme} ralewayFont ralewayFont`}>Linkedin</li>
+                        <p className={`${state.textColor} hammerFont`}>Hire</p>
+                        <li className={`${state.textColor} ralewayFont ralewayFont`}>Upwork</li>
+                        <li className={`${state.textColor} ralewayFont ralewayFont`}>Freelancer</li>
+                        <li className={`${state.textColor} ralewayFont ralewayFont`}>Linkedin</li>
                     </ul>
                 </article>
             </section>
-            <hr className={`${theme} ralewayFont`}></hr>
-            <p className={`${theme} ralewayFont text-center m-0 p-0`}>All rights reserved - Hamad {date.getFullYear()} </p>
+            <hr className={`${state.textColor} ralewayFont`}></hr>
+            <p className={`${state.textColor} ralewayFont text-center m-0 p-0`}>All rights reserved - Hamad {date.getFullYear()} </p>
         </section>
     )
 }

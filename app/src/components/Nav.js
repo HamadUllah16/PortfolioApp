@@ -17,8 +17,6 @@ const navLinks = [
 function Nav() {
     const { state } = useContext(ThemeContext);
 
-    const theme = state.darkMode ? "lightText" : "darkText";
-    const boxColor = state.darkMode ? `bgDarkBox` : `bg-light`;
 
     return (
         <>
@@ -27,8 +25,8 @@ function Nav() {
                     <article className='navBtnBox d-flex flex-row flex-md-column flex-lg-column flex-sm-row justify-content-around align-items-center gap-3'>
                         {navLinks.map((item, index) => {
                             return (
-                                <NavLink key={index} to={item.link} className={`${boxColor} btnNav ${theme}`}>
-                                    <FontAwesomeIcon icon={item.icon} className={`${theme}`} />
+                                <NavLink key={index} to={item.link} className={`${state.bgColor} btnNav ${state.textColor}`}>
+                                    <FontAwesomeIcon icon={item.icon} className={`${state.textColor}`} />
                                     {/* <p className={`${theme} mb-0 hammerFont text-center`}>{item.name}</p> */}
                                 </NavLink>
                             )

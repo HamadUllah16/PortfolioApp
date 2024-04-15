@@ -8,13 +8,11 @@ import Experience from '../components/Experience'
 import { ThemeContext } from '../App'
 
 function MainContainer() {
-  const { darkMode } = useContext(ThemeContext);
-
-  const theme = darkMode ? "bgDarkBox" : "bg-light border-right border-left border-bottom"
+  const { state } = useContext(ThemeContext);
 
   return (
     <section className='container-md p-0'>
-      <section className={`${theme} rounded-4 `}>
+      <section className={`${state.bgColor} ${state.border} rounded-4 `}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />

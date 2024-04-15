@@ -1,15 +1,18 @@
 export const intitalState = {
-    darkMode: false
+    darkMode: true,
+    textColor: "lightText",
+    bgColor: "bgDarkBox",
+    border: "border border-dark"
 }
 export const reducer = (state, action) => {
     switch (action.type) {
-        case "LightMode":
+        case "ToggleDarkMode":
             return {
-                darkMode: false
-            }
-        case "DarkMode":
-            return {
-                darkMode: true
+                ...state,
+                darkMode: !state.darkMode,
+                textColor: state.darkMode ? "darkText" : "lightText",
+                bgColor: state.darkMode ? "bg-light" : "bgDarkBox",
+                border: state.darkMode ? "border" : "border border-dark"
 
             }
         default:
