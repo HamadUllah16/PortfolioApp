@@ -103,12 +103,13 @@ header > div{
   /* position: relative; */
   display: flex;
   justify-content: center;
+  border-radius: 100%;
+  max-width: 150px;
 }
 
   .headerPfp > img{
-    width: 120px;
-    height: auto;
     object-fit: cover;
+    aspect-ratio: 3/3;
     border-radius: 100%;
   }
 
@@ -335,12 +336,15 @@ a {
 @media screen and (max-width: 767px) {
   .navBtnBox{
     position: fixed;
+    min-height: 80px;
     bottom: 0px;
     width: 100%;
     padding: 10px;
-    background-color: white;
+    backdrop-filter: blur(10px);
     z-index: 1000;
     transform-origin: center;
+    background-color: #203a4388;
+    box-shadow: rgba(0, 0, 0, 0.47) 0px 3px 25px 10px;
   }
   .footerMain{
     padding-bottom: 80px !important;
@@ -354,11 +358,8 @@ a {
     height: 40px;
     width: 40px;
   }
-  .navBtnBox{
-    min-height: 80px;
-  }
   .active{
-    transform:scale(1.5);
+    color: currentColor;
   }
 }
 

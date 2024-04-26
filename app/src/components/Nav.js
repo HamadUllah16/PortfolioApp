@@ -25,8 +25,8 @@ function Nav() {
                     <article className='navBtnBox d-flex flex-row flex-md-column flex-lg-column flex-sm-row justify-content-around align-items-center gap-3'>
                         {navLinks.map((item, index) => {
                             return (
-                                <NavLink key={index} to={item.link} className={`${state.bgColor} btnNav ${state.textColor}`}>
-                                    <FontAwesomeIcon icon={item.icon} className={`${state.textColor}`} />
+                                <NavLink key={index} to={item.link} className={`btnNav `} style={{ color: state.darkMode ? "white" : "black" }}>
+                                    <FontAwesomeIcon icon={item.icon} size='xl' className={`${state.textColor}`} />
                                     {/* <p className={`${theme} mb-0 hammerFont text-center`}>{item.name}</p> */}
                                 </NavLink>
                             )

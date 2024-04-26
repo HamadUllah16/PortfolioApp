@@ -35,7 +35,7 @@ function Footer() {
                 </article>
             </section>
             <hr className={`${state.textColor} ralewayFont`}></hr>
-            <p className={`${state.textColor} ralewayFont text-center m-0 p-0`}>All rights reserved - Hamad {date.getFullYear()} </p>
+            <p className={`${state.textColor} ralewayFont text-center m-0 py-2`}>All rights reserved - Hamad {date.getFullYear()} </p>
         </section>
     )
 }

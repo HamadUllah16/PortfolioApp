@@ -32,15 +32,15 @@ function Header() {
     })
     return (
         <header className='d-flex align-items-end container-md p-0' style={{ height: "auto" }} >
-            <div className={`container-fluid p-2 ${state.bgColor} ${state.border} rounded-4 `}>
+            <div className={`container-fluid p-2 py-4 ${state.bgColor} ${state.border} rounded-4 `}>
                 <section className='d-flex flex-column justify-content-center align-items-center'>
-                    <div className='headerPfp'>
-                        <img className='img img-fluid shadow' src={pfp} alt='' />
+                    <div className='headerPfp shadow'>
+                        <img className='img-fluid' src={pfp} alt='' />
                     </div>
                     <div className=' d-flex flex-column justify-content-around align-items-center' style={{ width: "100%" }}>
                         <div className='text-center mt-4'>
                             <p className={`${state.textColor} headerName mb-0`}>Hamad Ullah</p>
-                            <p className={`${state.textColor} navText `}>Software Engineer</p>
+                            <p className={`${state.textColor} navText `}>Front-End Software Engineer</p>
                         </div>
                         <div className='d-flex flex-wrap justify-content-center pt-1'>
                             {mapSocials}
