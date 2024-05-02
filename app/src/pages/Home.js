@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { ThemeContext } from "../App";
-
 function Home() {
   const { state } = useContext(ThemeContext);
   return (

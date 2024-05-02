@@ -20,8 +20,8 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ toggleDarkMode, state, dispatch }}>
-      <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delayChildren: 0.2 }} className={`${state.darkMode ? "bgDark" : ""} App`}>
-        <section className='row gap-3 p-0 mx-3 justify-content-center'>
+      <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delayChildren: 0.2 }} style={{ transition: "0.3s ease" }} className={`${state.darkMode ? "bgDark" : ""} App`}>
+        <section className='row py-2 gap-3 p-0 mx-3 justify-content-center'>
           <Switch />
           <article className='col-12 col-sm-12 col-md-2 col-lg-2 p-0'>
             <Header />

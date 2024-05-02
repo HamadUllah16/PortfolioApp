@@ -29,7 +29,7 @@ const techStack = [
 
 const experiences = [
   {
-    name: "Upwork", url: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", description: "Design, build and deploy web applications with the help of React, Node Express and MongoDB for clients all over the world. Build, modify and rank websites with WordPress.", technologies: ["React", "Bootstrap5", "Javascript", "WordPress"], logo: upwork, duration: "2021 - Present"
+    name: "Upwork", url: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", description: "Design, build and deploy web applications with the help of React, Node Express and MongoDB for clients all over the world. Build, modify and rank websites with WordPress.", technologies: ["React/Next", "TailwindCSS", "Bootstrap5", "Javascript", "WordPress"], logo: upwork, duration: "2021 - Present"
   }
 ]
 

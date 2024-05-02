@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useContext } from 'react'
 import { ThemeContext } from '../App'
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
-import { faArrowCircleDown, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faArrowRight } from '@fortawesome/free-solid-svg-icons'
 
 const pfp = '/pfp.jpg'
 
@@ -35,18 +35,19 @@ function Header() {
             <div className={`container-fluid p-2 py-4 ${state.bgColor} ${state.border} rounded-4 `}>
                 <section className='d-flex flex-column justify-content-center align-items-center'>
                     <div className='headerPfp shadow'>
-                        <img className='img-fluid' src={pfp} alt='' />
+                        <img className='img-fluid border border-4 border-dark-subtle' src={pfp} alt='a profile picture' />
                     </div>
-                    <div className=' d-flex flex-column justify-content-around align-items-center' style={{ width: "100%" }}>
+                    <div className='d-flex flex-column justify-content-around align-items-center' style={{ width: "100%" }}>
                         <div className='text-center mt-4'>
                             <p className={`${state.textColor} headerName mb-0`}>Hamad Ullah</p>
                             <p className={`${state.textColor} navText `}>Front-End Software Engineer</p>
-                        </div>
-                        <div className='d-flex flex-wrap justify-content-center pt-1'>
-                            {mapSocials}
+                            <hr className={`${state.textColor}`}></hr>
                         </div>
                     </div>
-                    <a target='_blank' rel='noreferrer' href={"https://drive.google.com/file/d/11DT1DB8Gt6gICzkeKliw5NdEY1Zj64DY/view?usp=sharing"} className='hireBtn px-3 d-flex justify-content-center align-items-center m-2'><FontAwesomeIcon icon={faArrowCircleDown} className='downloadIcon' size='lg' /> Resume</a>
+                    <div className='d-flex flex-wrap justify-content-center align-items-end pt-1'>
+                        {mapSocials}
+                    </div>
+                    <a target='_blank' rel='noreferrer' href={"https://drive.google.com/file/d/11DT1DB8Gt6gICzkeKliw5NdEY1Zj64DY/view?usp=sharing"} className={`${state.textColor} d-flex justify-content-center gap-2 align-items-center m-2 viewResume`}>Resume <FontAwesomeIcon icon={faArrowRight} size='lg' /></a>
 
                 </section>
             </div>

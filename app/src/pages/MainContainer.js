@@ -6,13 +6,12 @@ import TechStack from './TechStack'
 import Home from './Home'
 import Experience from '../components/Experience'
 import { ThemeContext } from '../App'
-
 function MainContainer() {
   const { state } = useContext(ThemeContext);
 
   return (
     <section className='container-md p-0'>
-      <section className={`${state.bgColor} ${state.border} rounded-4 `}>
+      <section className={` ${state.bgColor} ${state.border} rounded-4 `}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/projects' element={<Projects />} />
