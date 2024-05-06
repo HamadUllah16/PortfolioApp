@@ -32,12 +32,14 @@ function Header() {
     })
     return (
         <header className='d-flex align-items-end container-md p-0' style={{ height: "auto" }} >
-            <div className={`container-fluid p-2 py-4 ${state.bgColor} ${state.border} rounded-4 `}>
-                <section className='d-flex flex-column justify-content-center align-items-center'>
-                    <div className='headerPfp shadow'>
-                        <img className='img-fluid border border-4 border-dark-subtle' src={pfp} alt='a profile picture' />
-                    </div>
+            <div className={`container-fluid p-0 ${state.bgColor} ${state.border} rounded-4 position-relative`}>
+                <div className='pfpBackground w-100 position-absolute z-1 rounded-top-4' style={{ width: 100, height: 110 }}>
+                </div>
+                <section className='d-flex flex-column justify-content-center align-items-center p-2 py-4 z-3 position-relative'>
                     <div className='d-flex flex-column justify-content-around align-items-center' style={{ width: "100%" }}>
+                        <div className='headerPfp overflow-hidden' style={{ borderRadius: "100%", border: state.darkMode ? "5px solid " : "5px solid #f8f9fa" }}>
+                            <img className='img-fluid rounded-circle shadow border-4' src={pfp} alt='a profile pic' />
+                        </div>
                         <div className='text-center mt-4'>
                             <p className={`${state.textColor} headerName mb-0`}>Hamad Ullah</p>
                             <p className={`${state.textColor} navText `}>Front-End Software Engineer</p>

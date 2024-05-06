@@ -65,9 +65,9 @@ function TechStack() {
             {techStack.map((item, index) => {
               return (
                 <motion.div variants={cards} whileHover={{ backgroundColor: item.color }} className={`${state.textColor} cardBox col-2`} key={index}>
-                  <article className='skillBox '>
+                  <article className='skillBox img-fluid'>
                     <article className='p-1'>
-                      {item.custom ? <img src={item.icon} alt='skill' style={{ maxWidth: "60px" }} /> : <FontAwesomeIcon icon={item.icon} size="4x" />}
+                      {item.custom ? <img src={item.icon} alt='skill' style={{ maxWidth: "50px" }} /> : <FontAwesomeIcon icon={item.icon} size="3x" />}
                     </article>
                   </article>
                   <article className='mt-1 itemTextBox'>
@@ -79,7 +79,7 @@ function TechStack() {
           </motion.article>
         </section>
 
-        <section className='col-12 col-lg-6 col-md-12 col-sm-12 my-3'>
+        <section className='col-12 col-lg-6 px-3 col-md-12 col-sm-12 my-3'>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 2 }} className={`${state.textColor} navText fs-4`}>
             Experience:
           </motion.p>
