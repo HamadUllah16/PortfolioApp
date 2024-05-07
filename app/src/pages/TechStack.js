@@ -1,30 +1,37 @@
 import React, { useContext } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHtml5, faCss3, faReact, faJs, faBootstrap, faGithub, faNodeJs, faPython, faJava, faFigma, faAndroid, faGit, faWordpress } from '@fortawesome/free-brands-svg-icons'
 import { motion } from 'framer-motion'
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Experience from '../components/Experience'
 import { ThemeContext } from '../App'
+import SkillElement from '../components/SkillElement';
+import { FaFigma, FaGit } from 'react-icons/fa6';
+import { RiAndroidFill, RiBootstrapFill, RiCss3Fill, RiGithubFill, RiHtml5Fill, RiJavaFill, RiJavascriptFill, RiNextjsFill, RiNodejsFill, RiReactjsFill, RiWordpressFill, } from 'react-icons/ri';
+import { AiOutlinePython } from 'react-icons/ai';
+import { TbBrandReactNative } from 'react-icons/tb';
+import { SiExpress } from 'react-icons/si';
+import { BiLogoTypescript } from 'react-icons/bi';
 
-const express = "/express.png"
 const upwork = "/upworkGreen.png"
 
 const techStack = [
-  { name: "React", icon: faReact, custom: false, color: "#5ed3f3" },
-  { name: "Bootstrap5", icon: faBootstrap, custom: false, color: "#7719f7" },
-  { name: "NodeJs", icon: faNodeJs, custom: false, color: "#87cf30" },
-  { name: "Express", icon: express, custom: true, color: "#9fa5ab" },
-  { name: "Javascript", icon: faJs, custom: false, color: "#f0dc54" },
-  { name: "Figma", icon: faFigma, custom: false, color: "#f35424" },
-  { name: "React Native", icon: faReact, custom: false, color: "#5ed3f3" },
-  { name: "HTML5", icon: faHtml5, custom: false, color: "#e5532d" },
-  { name: "CSS3", icon: faCss3, custom: false, color: "#2d53e5" },
-  { name: "Python", icon: faPython, custom: false, color: "#ffd840" },
-  { name: "Java", icon: faJava, custom: false, color: "#0c7a93" },
-  { name: "Java Android", icon: faAndroid, custom: false, color: "#44db8a" },
-  { name: "GitHub", icon: faGithub, custom: false, color: "gray" },
-  { name: "Git", icon: faGit, custom: false, color: "#f05639" },
-  { name: "WordPress", icon: faWordpress, custom: false, color: "#28799e" }
+  { name: "React", icon: <RiReactjsFill size="3em" />, color: "#5ed3f3" },
+  { name: "Typescript", icon: <BiLogoTypescript size="3em" />, color: "#2f74c0" },
+  { name: "NextJs", icon: <RiNextjsFill size="3em" />, color: "black" },
+  { name: "Bootstrap5", icon: <RiBootstrapFill size="3em" />, color: "#7719f7" },
+  { name: "Javascript", icon: <RiJavascriptFill size="3em" />, color: "#f0dc54" },
+  { name: "HTML5", icon: <RiHtml5Fill size="3em" />, color: "#e5532d" },
+  { name: "CSS3", icon: <RiCss3Fill size="3em" />, color: "#2d53e5" },
+  { name: "NodeJs", icon: <RiNodejsFill size="3em" />, color: "#87cf30" },
+  { name: "Express", icon: <SiExpress size="3em" />, color: "#9fa5ab" },
+  { name: "Java", icon: <RiJavaFill size="3em" />, color: "#0c7a93" },
+  { name: "Python", icon: <AiOutlinePython size="3em" />, color: "#ffd840" },
+  { name: "Figma", icon: <FaFigma size="3em" />, color: "#f35424" },
+  { name: "React Native", icon: <TbBrandReactNative size="3em" />, color: "#5ed3f3" },
+  { name: "Java Android", icon: <RiAndroidFill size="3em" />, color: "#44db8a" },
+  { name: "GitHub", icon: <RiGithubFill size="3em" />, color: "gray" },
+  { name: "Git", icon: <FaGit size="3em" />, color: "#f05639" },
+  { name: "WordPress", icon: <RiWordpressFill size="3em" />, color: "#28799e" }
+
 ]
 
 const experiences = [
@@ -40,20 +47,12 @@ function TechStack() {
       opacity: 1,
       scale: 1,
       transition: {
-        delayChildren: 0.2,
-        staggerChildren: 0.1
+        delayChildren: 0.3,
+        staggerChildren: 0.2
       }
     }
-  };
+  }
 
-  const cards = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1
-
-    }
-  };
 
   const { state } = useContext(ThemeContext);
   return (
@@ -61,19 +60,10 @@ function TechStack() {
       <section className='row'>
         <section className='col-12 col-lg-6 col-md-12 col-sm-12 my-3'>
           <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className={`${state.textColor} navText fs-4 mx-1`}>Some technologies I've worked with:</motion.p>
-          <motion.article variants={container} initial={"hidden"} animate={"visible"} className='row gap-2 m-1'>
+          <motion.article className='d-flex flex-wrap align-items-center  gap-4 m-1' variants={container} initial={"hidden"} animate={"visible"}>
             {techStack.map((item, index) => {
               return (
-                <motion.div variants={cards} whileHover={{ backgroundColor: item.color }} className={`${state.textColor} cardBox col-2`} key={index}>
-                  <article className='skillBox img-fluid'>
-                    <article className='p-1'>
-                      {item.custom ? <img src={item.icon} alt='skill' style={{ maxWidth: "50px" }} /> : <FontAwesomeIcon icon={item.icon} size="3x" />}
-                    </article>
-                  </article>
-                  <article className='mt-1 itemTextBox'>
-                    <p className='m-0 p-0 text-center ralewayFont skillTitle' >{item.name}</p>
-                  </article>
-                </motion.div>
+                <SkillElement item={item} index={index} />
               )
             })}
           </motion.article>
