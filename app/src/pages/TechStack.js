@@ -1,5 +1,5 @@
-import React, { useContext } from 'react'
-import { motion } from 'framer-motion'
+import React, { useContext, useState } from 'react'
+import { delay, motion } from 'framer-motion'
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Experience from '../components/Experience'
 import { ThemeContext } from '../App'
@@ -34,11 +34,15 @@ const techStack = [
 
 ]
 
-const experiences = [
-  {
-    name: "Upwork", url: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", description: "Design, build and deploy web applications with the help of React, Node Express and MongoDB for clients all over the world. Build, modify and rank websites with WordPress.", technologies: ["React/Next", "TailwindCSS", "Bootstrap5", "Javascript", "WordPress"], logo: upwork, duration: "2021 - Present"
-  }
-]
+const experiences =
+  [
+    {
+      name: "DextroDev", url: "https://dextro.dev", description: "Design and develop intuitive, interactive user interfaces and experiences using best practices and industry conventions.", technologies: ["Figma", "React", "TailwindCSS"], logo: "https://dextro.dev/static/media/LogoDextro.b248f8d2.svg", duration: "2024 - Present"
+    },
+    {
+      name: "Upwork", url: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", description: "Design, build and deploy web applications with the help of React, Node Express and MongoDB for clients all over the world. Build, modify and rank websites with WordPress.", technologies: ["React/Next", "TailwindCSS", "Bootstrap5", "Javascript", "WordPress"], logo: upwork, duration: "2021 - Present"
+    }
+  ]
 
 function TechStack() {
   const container = {
@@ -47,6 +51,19 @@ function TechStack() {
       opacity: 1,
       scale: 1,
       transition: {
+        delayChildren: 0.2,
+        staggerChildren: 0.1
+      }
+    }
+  }
+
+  const container2 = {
+    hidden: { opacity: 0, scale: 1 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delay: 2.5,
         delayChildren: 0.3,
         staggerChildren: 0.2
       }
@@ -54,13 +71,26 @@ function TechStack() {
   }
 
 
+
   const { state } = useContext(ThemeContext);
   return (
-    <motion.section key={"tech-stack"} exit={{ opacity: 0 }} className='mainContainer px-lg-4'>
-      <section className='row'>
+    <motion.section key={"tech-stack"} exit={{ opacity: 0 }} className='mainContainer px-4 overflow-hidden'>
+      <section className='d-flex flex-wrap'>
         <section className='col-12 col-lg-6 col-md-12 col-sm-12 my-3'>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className={`${state.textColor} navText fs-4 mx-1`}>Some technologies I've worked with:</motion.p>
-          <motion.article className='d-flex flex-wrap align-items-center  gap-4 m-1' variants={container} initial={"hidden"} animate={"visible"}>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className={`${state.textColor} navText fs-4 mx-1`}
+          >
+            Some technologies I've worked with:
+          </motion.p>
+          <motion.article
+            className='d-flex flex-wrap align-items-center gap-4 m-1'
+            variants={container}
+            initial={"hidden"}
+            animate={"visible"}
+          >
             {techStack.map((item, index) => {
               return (
                 <SkillElement item={item} index={index} />
@@ -70,15 +100,26 @@ function TechStack() {
         </section>
 
         <section className='col-12 col-lg-6 px-3 col-md-12 col-sm-12 my-3'>
-          <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 2 }} className={`${state.textColor} navText fs-4`}>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 2 }}
+            className={`${state.textColor} navText fs-4`}
+          >
             Experience:
           </motion.p>
-          {experiences.map((item, index) => {
-            return (
-              <Experience item={item} index={index} linkIcon={faArrowUpRightFromSquare} />
-            )
-          })}
-
+          <motion.article
+            variants={container2}
+            initial={"hidden"}
+            animate={"visible"}
+            className='d-flex flex-column gap-2'
+          >
+            {experiences.map((item, index) => {
+              return (
+                <Experience item={item} index={index} linkIcon={faArrowUpRightFromSquare} />
+              )
+            })}
+          </motion.article>
         </section>
       </section>
     </motion.section>

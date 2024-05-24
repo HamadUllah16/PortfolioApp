@@ -366,10 +366,6 @@ a {
   .footerMain{
     padding-bottom: 80px !important;
   }
-  .mainContainer{
-    min-height: 90vh;
-    width: auto;
-  }
 
   .btnNav{
     height: 40px;
@@ -393,7 +389,7 @@ a {
   height: auto;
   min-height: 60vh;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   overflow-y: auto;
 }
@@ -567,8 +563,8 @@ li {
 
 .experience{
   border-radius: 8px;
-  transition: 0.3s;
-  transition-delay: 0.1s;
+  transition: 0.1s ease;
+  overflow: hidden;
 }
 .experience:hover{
   cursor: pointer;

@@ -8,6 +8,7 @@ import { createContext, useReducer } from 'react';
 import { intitalState, reducer } from './components/reducer';
 import { motion } from 'framer-motion';
 import Switch from './components/Switch';
+const signature = "/signature.png"
 
 export const ThemeContext = createContext();
 
@@ -20,12 +21,14 @@ function App() {
 
   return (
     <ThemeContext.Provider value={{ toggleDarkMode, state, dispatch }}>
-      <motion.section initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delayChildren: 0.2 }} style={{ transition: "0.3s ease" }} className={`${state.darkMode ? "bgDark" : ""} App`}>
-        <section className='row py-2 gap-3 p-0 mx-3 justify-content-center'>
-          <Switch />
-          <article className='col-12 col-sm-12 col-md-2 col-lg-2 p-0'>
+      <motion.section style={{ transition: "0.3s ease" }} className={`${state.darkMode ? "bgDark" : ""} App`}>
+        <motion.section className='row py-2 gap-3 p-0 mx-3 justify-content-center'>
+          <motion.article>
+            <Switch />
+          </motion.article>
+          <motion.article className='col-12 col-sm-12 col-md-2 col-lg-2 p-0'>
             <Header />
-          </article>
+          </motion.article>
           <article className='col-12 col-sm-12 col-md-8 col-lg-9 p-0'>
             <MainContainer />
           </article>
@@ -33,7 +36,7 @@ function App() {
             <Nav />
           </article>
           <Footer />
-        </section>
+        </motion.section>
       </motion.section>
     </ThemeContext.Provider>
   );

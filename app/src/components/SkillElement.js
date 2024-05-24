@@ -13,7 +13,12 @@ const cards = {
 function SkillElement({ item, index }) {
     const { state } = useContext(ThemeContext);
     return (
-        <motion.div variants={cards} whileHover={{ backgroundColor: item.color }} className={`${state.textColor} cardBox`} key={index}>
+        <motion.div
+            variants={cards}
+            whileHover={{ backgroundColor: item.color }}
+            className={`${state.textColor} cardBox`}
+            key={index}
+        >
             <article className='skillBox ' style={{ maxWidth: "60px" }}>
                 <article className='p-1'>
                     {item.icon}

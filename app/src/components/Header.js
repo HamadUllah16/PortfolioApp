@@ -49,7 +49,7 @@ function Header() {
                     <div className='d-flex flex-wrap justify-content-center align-items-end pt-1'>
                         {mapSocials}
                     </div>
-                    <a target='_blank' rel='noreferrer' href={"https://drive.google.com/file/d/1fIfYZ6c2Ppx3Dn_IeX6yvs278-0RnHRM/view?usp=sharing"} className={`${state.textColor} d-flex justify-content-center gap-2 align-items-center m-2 viewResume`}>Resume <FontAwesomeIcon icon={faArrowRight} size='lg' /></a>
+                    <a target='_blank' rel='noreferrer' href={"https://drive.google.com/drive/folders/1qfen1IlVD3V-dI6xLf25zWJ8G16kPIeh?usp=sharing"} className={`${state.textColor} d-flex justify-content-center gap-2 align-items-center m-2 viewResume`}>Resume <FontAwesomeIcon icon={faArrowRight} size='lg' /></a>
 
                 </section>
             </div>

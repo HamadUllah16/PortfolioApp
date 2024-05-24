@@ -10,7 +10,7 @@ function About() {
   const { state } = useContext(ThemeContext);
   return (
     <section key={"about"} initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className='mainContainer gap-2'>
-      <motion.section key={"about"} initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="row p-4">
+      <motion.section key={"about"} initial={{ opacity: 0 }} exit={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }} className="d-flex flex-wrap gap-3 p-4">
         <article className='col-12 col-lg-6 col-md-12 col-sm-12'>
           <h4 className={`${state.textColor} navText fs-3`}>Hi I'm Hamad</h4>
           <p className={`${state.textColor} fs-5 ralewayFont mb-1`}>A Software Engineer who likes to build amazing web applications using latest technologies and frameworks. I obsess over systematic and conventional way of building web applications to:</p>
