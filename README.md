@@ -8,7 +8,7 @@
   </div>
   <h4>Description:</h4>
   <p>A personalized portfolio application built with the help of React to showcase resume and projects.</p>
-  <img style="border-radius: 10px;" src="https://i.imgur.com/vS0Tqz4.png" />
+  <img style="border-radius: 10px;" src="[https://i.imgur.com/vS0Tqz4.png](https://i.imgur.com/Pj37Qrd.png)" />
 
   <h4>How to use?</h4>
   <p>Pull the project via Git, open terminal and type "npm install" to install all of the dependencies. To start the project, type "npm start" and that's it!</p>
