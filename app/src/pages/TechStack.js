@@ -5,7 +5,7 @@ import Experience from '../components/Experience'
 import { ThemeContext } from '../App'
 import SkillElement from '../components/SkillElement';
 import { FaFigma, FaGit } from 'react-icons/fa6';
-import { RiAndroidFill, RiBootstrapFill, RiCss3Fill, RiGithubFill, RiHtml5Fill, RiJavaFill, RiJavascriptFill, RiNextjsFill, RiNodejsFill, RiReactjsFill, RiWordpressFill, } from 'react-icons/ri';
+import { RiAndroidFill, RiBootstrapFill, RiCss3Fill, RiGithubFill, RiHtml5Fill, RiJavaFill, RiJavascriptFill, RiNextjsFill, RiNodejsFill, RiReactjsFill, RiTailwindCssFill, RiWordpressFill, } from 'react-icons/ri';
 import { AiOutlinePython } from 'react-icons/ai';
 import { TbBrandReactNative } from 'react-icons/tb';
 import { SiExpress } from 'react-icons/si';
@@ -17,6 +17,7 @@ const techStack = [
   { name: "React", icon: <RiReactjsFill size="3em" />, color: "#5ed3f3" },
   { name: "Typescript", icon: <BiLogoTypescript size="3em" />, color: "#2f74c0" },
   { name: "NextJs", icon: <RiNextjsFill size="3em" />, color: "black" },
+  { name: "TailwindCSS", icon: <RiTailwindCssFill size={"3em"} />, color: '#1cafb9' },
   { name: "Bootstrap5", icon: <RiBootstrapFill size="3em" />, color: "#7719f7" },
   { name: "Javascript", icon: <RiJavascriptFill size="3em" />, color: "#f0dc54" },
   { name: "HTML5", icon: <RiHtml5Fill size="3em" />, color: "#e5532d" },
@@ -37,7 +38,7 @@ const techStack = [
 const experiences =
   [
     {
-      name: "DextroDev", url: "https://dextro.dev", description: "Design and develop intuitive, interactive user interfaces and experiences using best practices and industry conventions.", technologies: ["Figma", "React", "TailwindCSS"], logo: "https://dextro.dev/static/media/LogoDextro.b248f8d2.svg", duration: "2024 - Present"
+      name: "DeXtro", url: "https://dextro.dev", description: "Design and develop intuitive, interactive user interfaces and experiences using best practices and industry conventions.", technologies: ["Figma", "React", "TailwindCSS"], logo: "https://dextro.dev/static/media/LogoDextro.b248f8d2.svg", duration: "2024 - Present"
     },
     {
       name: "Upwork", url: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", description: "Design, build and deploy web applications with the help of React, Node Express and MongoDB for clients all over the world. Build, modify and rank websites with WordPress.", technologies: ["React/Next", "TailwindCSS", "Bootstrap5", "Javascript", "WordPress"], logo: upwork, duration: "2021 - Present"

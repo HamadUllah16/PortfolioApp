@@ -387,6 +387,7 @@ a {
 
 .mainContainer {
   height: auto;
+  max-height: 100vh;
   min-height: 60vh;
   display: flex;
   align-items: start;
@@ -442,6 +443,7 @@ li {
   padding-top: 10px;
   max-width: 18rem;
   transition: 0.2s ease;
+  height: max-content;
 }
 
 .cardSize .description {
@@ -580,6 +582,8 @@ li {
   padding: 0px;
   margin: 0px;
   transition: 0.3s ease-in;
+  border-radius: 8px;
+  overflow: hidden;
 }
 .cardBox:hover .skillBox svg{
   color: white;
@@ -588,6 +592,8 @@ li {
   transition: 0.2s;
 }
 .itemTextBox p{
+  display: flex;
+  justify-content: center;
   transition-delay: 0.3s;
   color: #ebeeec;
   transition: 0.2 ease-out;

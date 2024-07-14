@@ -19,9 +19,9 @@ function Card({ item, index }) {
     const { state } = useContext(ThemeContext);
     return (
         <motion.a variants={cards} whileHover={{ scale: 1.05 }}
-            href={item.live} key={index} target='_blank' rel='noreferrer' style={{ overflow: "hidden" }} className={`${state.border} rounded shadow-lg cardSize my-2 mx-1 p-0 col-12 col-md-12 col-lg-6`}>
-            <img src={item.image} alt='project-cover' className=" card-img-top bg-light rounded-2 projectImage" />
-            <div className={`${state.bgColor} card-body p-2`} >
+            href={item.live} key={index} target='_blank' rel='noreferrer' style={{ overflow: "hidden" }} className={`rounded-4  bg-transparent cardSize my-2 mx-1 p-2 col-12 col-md-12 col-lg-6`}>
+            <img src={item.image} alt='project-cover' className="card-img-top rounded-4 projectImage object-fit-cover" />
+            <div className={`card-body py-2`} >
                 <div className={`${state.textColor} card-title navText d-flex justify-content-between align-items-center gap-2`}><p className='fs-6 p-0 m-0'>{item.name}</p>
                     <div className='d-flex align-items-center gap-2'>
                         {item.github ?
@@ -37,10 +37,10 @@ function Card({ item, index }) {
                     </div>
                 </div>
                 <p className={`${state.textColor} card-text ralewayFont description`}>{item.description}</p>
-                <article className='d-flex flex-wrap align-items-center'>
-                    {item.technologies.map((item, index) => {
+                <article className='d-flex gap-2 flex-wrap align-items-center'>
+                    {item.technologies.map((logo, index) => {
                         return (
-                            <div key={index} className={`${state.textColor} ${state.darkMode ? "techBoxBlack" : "techBox"}`}><p className='px-2 text-center m-0'>{item}</p></div>
+                            <div key={index} className={`${state.textColor}`}><p className=' text-center m-0'>{logo}</p></div>
                         )
                     })}
                 </article>

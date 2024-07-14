@@ -2,7 +2,7 @@ export const intitalState = {
     darkMode: true,
     textColor: "lightText",
     bgColor: "bgDarkBox",
-    border: "border border-dark"
+    border: ""
 }
 export const reducer = (state, action) => {
     switch (action.type) {
@@ -12,7 +12,7 @@ export const reducer = (state, action) => {
                 darkMode: !state.darkMode,
                 textColor: state.darkMode ? "darkText" : "lightText",
                 bgColor: state.darkMode ? "bg-light" : "bgDarkBox",
-                border: state.darkMode ? "border" : "border border-dark"
+                border: state.darkMode ? "border" : ""
 
             }
         default:

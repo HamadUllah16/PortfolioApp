@@ -19,13 +19,13 @@ function SkillElement({ item, index }) {
             className={`${state.textColor} cardBox`}
             key={index}
         >
-            <article className='skillBox ' style={{ maxWidth: "60px" }}>
+            <article className='skillBox' style={{ maxWidth: "fit-content" }}>
                 <article className='p-1'>
                     {item.icon}
                 </article>
             </article>
             <article className='mt-1 itemTextBox'>
-                <p className='m-0 p-0 text-center ralewayFont skillTitle' >{item.name}</p>
+                <p className='m-0 text-center ralewayFont skillTitle' >{item.name}</p>
             </article>
         </motion.div>
     )
