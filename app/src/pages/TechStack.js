@@ -38,10 +38,10 @@ const techStack = [
 const experiences =
   [
     {
-      name: "DeXtro", url: "https://dextro.dev", description: "Design and develop intuitive, interactive user interfaces and experiences using best practices and industry conventions.", technologies: ["Figma", "React", "TailwindCSS"], logo: "https://dextro.dev/static/media/LogoDextro.b248f8d2.svg", duration: "2024 - Present"
+      name: "DeXtro", url: "https://dextro.dev", description: "Design and develop intuitive, interactive user interfaces and experiences utilizing cutting edge technologies including NextJs, Redux Toolkit, Material UI. Collaborate with Backend team in integration and testing. Utilize Git & GitHub for contributions and deployments.", technologies: ["Figma", "NextJs", "Material UI", 'Redux Toolkit'], logo: "https://dextro.dev/static/media/LogoDextro.b248f8d2.svg", duration: "May, 2024 - Present"
     },
     {
-      name: "Upwork", url: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", description: "Design, build and deploy web applications with the help of React, Node Express and MongoDB for clients all over the world. Build, modify and rank websites with WordPress.", technologies: ["React/Next", "TailwindCSS", "Bootstrap5", "Javascript", "WordPress"], logo: upwork, duration: "2021 - Present"
+      name: "Upwork", url: "https://www.upwork.com/freelancers/~019b0b1b1406a889c6", description: "Design, build and deploy web applications with the help of React, Node Express and MongoDB for clients all over the world. Build, modify and rank websites with WordPress.", technologies: ["React/Next", "TailwindCSS", "Bootstrap5", "Javascript", "WordPress"], logo: upwork, duration: "Oct, 2021 - Present"
     }
   ]
 
