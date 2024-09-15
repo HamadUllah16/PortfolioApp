@@ -444,18 +444,20 @@ li {
   max-width: 18rem;
   transition: 0.2s ease;
   height: max-content;
+  border: 1px solid #dadada00;
 }
 
 .cardSize .description {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  height: 78px;
+  max-height: 78px;
   overflow: hidden;
   display: -webkit-box;
 }
 
 .cardSize:hover {
   cursor: pointer;
+  border: 1px solid #DADADA;
 }
 
 .projectImage {

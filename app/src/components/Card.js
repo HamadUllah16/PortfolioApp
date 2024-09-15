@@ -20,7 +20,7 @@ function Card({ item, index }) {
     return (
         <motion.a variants={cards} whileHover={{ scale: 1.05 }}
             href={item.live} key={index} target='_blank' rel='noreferrer' style={{ overflow: "hidden" }} className={`rounded-4  bg-transparent cardSize my-2 mx-1 p-2 col-12 col-md-12 col-lg-6`}>
-            <img src={item.image} alt='project-cover' className="card-img-top rounded-4 projectImage object-fit-cover" />
+            <img src={item.image} alt='project-cover' className="card-img-top rounded-3 projectImage object-fit-cover" />
             <div className={`card-body py-2`} >
                 <div className={`${state.textColor} card-title navText d-flex justify-content-between align-items-center gap-2`}><p className='fs-6 p-0 m-0'>{item.name}</p>
                     <div className='d-flex align-items-center gap-2'>
