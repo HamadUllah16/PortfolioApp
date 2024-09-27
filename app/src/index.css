@@ -26,6 +26,10 @@ body {
   font-family: 'Hammersmith';
   src: local('Hammersmith'), url("./fonts/HammersmithOne-Regular.ttf");
 }
+@font-face {
+  font-family: 'Eyesome Script';
+  src: url('./fonts/eyesome-duo-script.otf') format('opentype');
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

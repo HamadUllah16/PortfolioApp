@@ -641,3 +641,27 @@ li {
   border-radius: 5px;
   transform: scale(1.01);
 }
+
+/* ---------------preloader css--------------------- */
+
+/* Preloader.css */
+.preloader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fff; /* Background color for preloader */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999; /* Ensure it appears above other elements */
+}
+
+.preloader-text {
+  font-family: 'Eyesome Script';
+  font-size: 48px; /* Adjust font size as needed */
+  color: #000; /* Text color */
+  white-space: nowrap;
+  overflow: hidden;
+}

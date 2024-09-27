@@ -8,6 +8,7 @@ import { createContext, useReducer } from 'react';
 import { intitalState, reducer } from './components/reducer';
 import { motion } from 'framer-motion';
 import Switch from './components/Switch';
+import Preloader from './components/Preloader';
 const signature = "/signature.png"
 
 export const ThemeContext = createContext();
@@ -22,6 +23,7 @@ function App() {
   return (
     <ThemeContext.Provider value={{ toggleDarkMode, state, dispatch }}>
       <motion.section style={{ transition: "0.3s ease" }} className={`${state.darkMode ? "bgDark" : ""} App`}>
+        {/* <Preloader /> */}
         <motion.section className='row py-2 gap-3 p-0 mx-3 justify-content-center'>
           <motion.article>
             <Switch />
